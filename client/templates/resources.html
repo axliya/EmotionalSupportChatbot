@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+{% block content %}
+
+{% for r in resources %}
+
+<div class="col s6 offset-s3">
+  <h2 class="header">{{ r.title }}</h2>
+  <div class="card horizontal">
+    <div class="card-stacked">
+      <div class="card-content">
+        <p>
+            {{ r.contact }}
+            <br>
+            {{ r.about }}
+            <div class="card-action">
+              <a href="#"> {{ r.link }} </a>
+            </div>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}

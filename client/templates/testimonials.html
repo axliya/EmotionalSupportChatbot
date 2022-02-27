@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+{% block content %}
+
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s12">
+        <form method="POST" action="/testimonials">
+          <input type="text" id="testimonials" name="testimonials" class="materialize-textarea"/>
+          <input class="btn waves-effect waves-light" type="submit" value="Submit" name="action"/>
+        </form>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+{% for t in testimonials %}
+
+<div class="row">
+  <div class="col s6 offset-s3">
+    <div class="card-panel teal">
+      <p class="white-text" text-align: center;>
+        {{ t.text }}
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}
