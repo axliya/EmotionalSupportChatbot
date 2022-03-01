@@ -13,15 +13,17 @@ def home():
 
 @app.route('/testimonials', methods=['GET', 'POST'])
 def addtestimonial():
+    if(request.method == "POST"):
+      testimonial = request.form.get('testimonials')
+
+      db.Testimonials.insert_one({"text": testimonial})
+
+      return redirect("/")
+
     if(request.method == "GET"):
-        testimonial = request.args.get('testimonials', type=str)
+      testimonials = list(db.Testimonials.find())
 
-        if testimonial is not None:
-          db.Testimonials.insert_one({"text": testimonial})
-
-    testimonials = list(db.Testimonials.find())
-
-    return render_template("testimonials.html", testimonials=testimonials)
+      return render_template("testimonials.html", testimonials=testimonials)
 
 @app.route('/resources', methods=['GET'])
 def viewresources():
