@@ -1,21 +1,33 @@
 {% extends "index.html" %}
 {% block content %}
 
+<div class="row">
+  <div class="col s6 offset-s3">
+    <div class="card-panel teal">
+      <span class="white-text">The following resource provides hotline services outside the region of Trinidad and Tobago.
+        However, there are a number of linked resources and sites available related to any form of abuse that are substantially beneficial and helpful.
+        Please find the ones related to your situation so you can receive the best help</span>
+    </div>
+  </div>
+</div>
+
 {% for r in resources %}
 
-<div class="col s6 offset-s3">
-  <h2 class="header">{{ r.title }}</h2>
-  <div class="card horizontal">
-    <div class="card-stacked">
-      <div class="card-content">
-        <p>
-            {{ r.contact }}
-            <br>
-            {{ r.about }}
-            <div class="card-action">
-              <a href="#"> {{ r.link }} </a>
-            </div>
-        </p>
+<div class="row">
+  <div class="col s8 offset-s2">
+    <div class="card horizontal">
+      <div class="card-stacked">
+        <div class="card-content">
+          <h2 class="header">{{ r.title }}</h2>
+          <p>
+              {{ r.contact }}
+              <br>
+              {{ r.about }}
+              <div class="card-action">
+                <a href="#"> {{ r.link }} </a>
+              </div>
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -23,4 +35,9 @@
 
 {% endfor %}
 
+<div class="row">
+  <div class="col s4 offset-s4">
+    <iframe align="center" width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/search?q=therapists&key=AIzaSyBT9Z5nuoG9FCzoGVhyCNfe9FKJEAhEHzY"></iframe>
+  </div>
+</div>
 {% endblock %}

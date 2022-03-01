@@ -1,25 +1,21 @@
 {% extends "index.html" %}
 {% block content %}
 
-<div class="row">
-  <form class="col s12">
     <div class="row">
-      <div class="input-field col s12">
-        <form method="POST" action="/testimonials">
+      <div class="input-field s6 offset-s3">
+        <form method="POST" action="/testimonials" class="col s6 offset-s3">
           <input type="text" id="testimonials" name="testimonials" class="materialize-textarea"/>
-          <input class="btn waves-effect waves-light" type="submit" value="Submit" name="action"/>
+          <input class="btn waves-effect waves-light blue darken-4" type="submit" value="Submit" name="action"/>
         </form>
       </div>
     </div>
-  </form>
-</div>
 
 
 {% for t in testimonials %}
 
 <div class="row">
   <div class="col s6 offset-s3">
-    <div class="card-panel teal">
+    <div class="card-panel brown lighten-3">
       <p class="white-text" text-align: center;>
         {{ t.text }}
       </p>
