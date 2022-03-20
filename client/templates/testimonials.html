@@ -3,13 +3,26 @@
 
     <div class="row">
       <div class="input-field s6 offset-s3">
-        <form method="POST" action="/testimonials" class="col s6 offset-s3">
-          <input type="text" id="testimonials" name="testimonials" class="materialize-textarea"/>
-          <input class="btn waves-effect waves-light blue darken-4" type="submit" value="Submit" name="action"/>
+        <a href='/addtestimonial' class="waves-effect waves-light btn"><i class="material-icons right">add</i>Add your own testimonial!</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field s6 offset-s3">
+        <form method="POST" class="col s6 offset-s3" action="/testimonials">
+          <label for="sort">Sort By</label>
+          <br> 
+            <select name="sort" id="sort">
+              <option value="1">Newest to Oldest</option>
+              <option value="2">Highest to Lowest Rating</option>
+              <option value="3">Lowest to Highest Rating</option>
+            </select>
+            <input class="btn waves-effect waves-light blue darken-4" type="submit" value="Submit" name="action"/>
         </form>
       </div>
     </div>
 
+    <br><br>
 
 {% for t in testimonials %}
 
@@ -18,11 +31,21 @@
     <div class="card-panel brown lighten-3">
       <p class="white-text" text-align: center;>
         {{ t.text }}
+        <br>
+        Rating: {{ t.rating }}
       </p>
     </div>
   </div>
 </div>
 
 {% endfor %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+  $document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+});
+</script>
 
 {% endblock %}

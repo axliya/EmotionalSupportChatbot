@@ -11,19 +11,34 @@ db = client.EmotionalSupportChatbot
 def home():
   return render_template('index.html')
 
-@app.route('/testimonials', methods=['GET', 'POST'])
+@app.route('/addtestimonial', methods=['GET', 'POST'])
 def addtestimonial():
     if(request.method == "POST"):
       testimonial = request.form.get('testimonials')
+      rating = request.form.get('ratings')
 
-      db.Testimonials.insert_one({"text": testimonial})
+      db.Testimonials.insert_one({"text": testimonial, "rating": rating})
 
-      return redirect("/")
+      return redirect('/testimonials')
+    return render_template('addtestimonial.html')
+      
 
-    if(request.method == "GET"):
-      testimonials = list(db.Testimonials.find())
+@app.route('/testimonials', methods=['GET', 'POST'])
+def rendertestimonials():
+  testimonials = list(db.Testimonials.find())
 
-      return render_template("testimonials.html", testimonials=testimonials)
+  if(request.method == "POST"):
+    sorting = request.form.get('sort')
+
+    if(sorting == "1"):
+      testimonials = list(db.Testimonials.find().sort('_id', -1))
+    elif (sorting == "2"):
+      testimonials = list(db.Testimonials.find().sort("rating", -1))
+    else:
+      testimonials = list(db.Testimonials.find().sort("rating", 1))
+
+  return render_template("testimonials.html", testimonials=testimonials)
+
 
 @app.route('/resources', methods=['GET'])
 def viewresources():
