@@ -1,0 +1,448 @@
+<!-- chatbot styling-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://fonts.googleapis.com/css2?family=Abel&family=Dancing+Script&family=Piazzolla:wght@100&display=swap" rel="stylesheet">
+    <title>Emotional Support Chatbot</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+
+    
+<style>
+
+.chat-icon{
+    width: 100px;
+    position: sticky;
+    top: 50%;
+    left:90%;
+    bottom:4%;
+    z-index: 100;
+}
+
+.chat-btn{
+padding: 12px 20px;
+background-color: #1e78ee;
+color: #fff;
+outline: none;
+border: 2px solid #1e78ee;
+font-weight: bold;
+cursor: pointer;
+border-radius: 40px;
+width: 100px;
+font-size: 17px;
+}
+
+.chat-btn a{
+text-decoration:none;
+color:#fff;
+justify-content: center;
+}
+  
+    .colorBlock {
+      width: 30px;
+      height: 30px;
+      padding-left:10px; 
+	  float:left;
+    }
+    #col1{
+      background-color: #000;
+    }
+	#col3{
+      background-color: #0a205f;
+    }
+	#col4{
+		background-color:#008B8B;
+    }
+	#col5{
+		background-color:#B0E0E6;
+    }
+	#col6{
+		background-color:#8FBC8F;
+    }
+
+	#col7{
+		background-color:#98FB98;
+    }
+	#col8{
+		background-color:rgb(235, 57, 57);
+    }
+	#col9{
+		background-color:#FFC0CB;
+    }
+	
+	#col10{
+		background-color:#FFE4E1;
+    }
+	
+	#col11{
+		background-color:#D8BFD8;
+    }
+    #col12{
+		background-color:#e94fe9;
+    }
+	#col13{
+		background-color:#FFFF00;
+    }
+    #col14{
+		background-color:#F0E68C;
+    }
+	#col15{
+		background-color:#D2B48C;
+    }
+    #col16{
+		background-color:rgb(245, 152, 31);
+    }
+    
+	#col17{
+		background-color:#e3effa;
+    }
+        
+html,
+   *{
+              margin: 0;
+              padding: 0;
+              font-family: 'Abel', sans-serif;
+        }
+
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #e9e9f0;
+	border-radius: 5px;
+}
+
+
+
+
+.chatbox {
+    width: 80%;
+    height: 550px;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    /*flex-wrap: nowrap;*/
+    overflow: hidden;
+    box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+    margin-top: 80px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.chat-window {
+    flex: auto;
+    max-height: calc(100% - 40px);
+    max-width:  100%;
+    height: 2000px;
+    background: #434242;
+    overflow: auto;
+}
+
+.chat-input {
+    flex: 0 0 auto;
+    height: 60px;
+    background: #ffff;
+    border-top: 1px solid #2671ff;
+    box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+}
+.chat-input input {
+    height: 59px;
+    line-height: 60px;
+    outline: 0 none;
+    border: none;
+    width: calc(100% - 60px);
+    color: black;
+    text-indent: 10px;
+    font-size: 11pt;
+    padding: 0;
+    background: #ddd;
+}
+.chat-input button {
+    float: right;
+    outline: 0 none;
+    border: none;
+    background: rgba(255,255,255,.25);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 2px 0 0 0;
+    margin: 10px;
+    transition: all 0.15s ease-in-out;
+}
+.chat-input input[good] + button {
+    box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+    background: #2671ff;
+}
+.chat-input input[good] + button:hover {
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.chat-input input[good] + button path {
+    fill: white;
+}
+.msg-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+.msg-box {
+    margin-left: 10px;
+    background: #fff;
+    color: black;
+    padding: 10px 10px 0 10px;
+    border-radius: 15px 15px 15px 15px;
+    border-top-left-radius: 0;
+    max-width: 80%;
+    width: auto;
+    float: left;
+    box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+}
+.msg-box:first-of-type {
+ margin-top: 10px;
+}
+.flr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.messages {
+    flex: 1 0 auto;
+    word-wrap: break-word;
+}
+.msg {
+    font-size: 11pt;
+    line-height: 13pt;
+}
+.msg-remote .msg {
+    color: black;
+    font-size: 11pt;
+    line-height: 13pt;
+}
+.msg:first-of-type {
+    margin-top: 10px;
+}
+.timestamp {
+    color: rgba(0,0,0,.38);
+    font-size: 8pt;
+    margin-bottom: 10px;
+}
+.username {
+    margin-right: 10px;
+    font-weight: bold;
+    color:black;
+}
+.posttime {
+    font-size: 0.85em;
+}
+.msg-self .msg-box {
+    margin-right: 10px;
+    border-radius: 15px 15px 15px 15px;
+    border-top-right-radius: 0;
+    background-color: #80aaff;
+	color: #fff;
+    float: right;
+}
+
+.msg-self .msg {
+    text-align: left;
+}
+.msg-self .timestamp {
+    text-align: right;
+}
+.menu {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 50px;
+
+}
+
+.header-text {
+  color: #ffff;
+  font-size: 14pt;
+  text-align: left;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: black;
+}
+
+
+
+ </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ 
+<script>
+ $('.chat-input input').keyup(function(e) {
+	if ($(this).val() == '')
+		$(this).removeAttr('good');
+	else
+		$(this).attr('good', '');
+});
+</script>
+
+
+</head>
+  
+<body style="background-color:powderblue;">
+    
+
+    <nav class="navbar navbar-inverse navbar-fixed-top " >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar "></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+          </div>
+          <div class="collapse navbar-collapse " id="myNavbar">
+            <ul class="nav navbar-nav mb-0 h4">
+              <li><a href="#chatbot">Home</a></li>
+              <li><a href="#">Helpful Resources</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right mb-0 h4">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Background Colour <span class="caret"></span></a>
+                    
+              
+              
+                <ul class="dropdown-menu">
+                
+            <div class="colorBlock" id="col1"></div>
+            <div class="colorBlock" id="col3"></div>
+            <div class="colorBlock" id="col4"></div>
+            <div class="colorBlock" id="col5"></div>
+            <div class="colorBlock" id="col6"></div>
+            <div class="colorBlock" id="col7"></div>
+            <div class="colorBlock" id="col8"></div>
+            <div class="colorBlock" id="col9"></div>
+            <div class="colorBlock" id="col10"></div>
+            <div class="colorBlock" id="col11"></div>
+            <div class="colorBlock" id="col12"></div>
+            <div class="colorBlock" id="col13"></div>
+            <div class="colorBlock" id="col14"></div>
+            <div class="colorBlock" id="col15"></div>
+            <div class="colorBlock" id="col16"></div>
+            <div class="colorBlock" id="col17"></div>
+         <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+          <script type="text/javascript" charset="utf-8">
+         //Create anonymous function that listens for a click on anything with the class colorBlock
+          $(".colorBlock").click(function() {
+            //Get the background color of the clicked color block by using the this object
+            var $backgroundColor = $(this).css("background-color");
+            //Set the body's background-color to the received background-color
+            $("body").css("background-color", $backgroundColor);
+          });
+          </script>
+                              
+           
+                </ul>  
+                </ul>
+                
+              </li>
+            </ul>
+        
+          </div>
+        </div>
+      </nav>
+       
+     
+
+<section id="head">
+<!-- chat window -->
+<div class="container">
+    <div class="chatbox">
+        <div class="menu"><p class="header-text">Emotional Support Chatbot</p></div>
+        
+        <div class="chat-window">
+          <article class="msg-container msg-remote">
+              <div class="msg-box"><div class="flr"><div class="username">Ashia</div></div><div class="messages">
+                  <p class="msg" id="msg_1">Hi there :)  Tell me what's on your mind </p></div></div></article>'
+		</div>
+
+        <!-- input message area -->
+		<form class="chat-input" action="" method="POST">
+			<input type="text" class="message" autocomplete="on" placeholder="Type a message..." />
+			<button type="submit">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <!--send arrow-->
+                    <path fill="rgba(0,0,0,.38)" d="M17,12L12,17V14H8V10H12V7L17,12M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L5,8.09V15.91L12,19.85L19,15.91V8.09L12,4.15Z" />
+                    </svg>
+            </button>
+		</form>
+    </div>
+
+</div>
+</section>
+
+
+<!-- loading jquery and Socket IO JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+    <script>
+
+    //connection to the socket IO server
+      var socket = io.connect( 'http://' + document.domain + ':' + location.port )
+
+          // broadcast a message when user is connected
+      socket.on( 'connect', function() {
+        socket.emit( 'my event', {
+          data: 'User Connected'
+        } )
+        var form = $( 'form' ).on( 'submit', function( e ) {
+          e.preventDefault()
+          let user_name = "You"
+          let user_input = $( 'input.message' ).val()
+
+          socket.emit( 'my eventes', {
+            user_name : user_name,
+            message : user_input
+          } )
+
+          // empty the input field
+          $( 'input.message' ).val( '' ).focus()
+        } )
+      } )
+
+      // capture message
+      socket.on( 'my response', function( msg ) {
+        console.log( msg )
+        var dt = new Date();
+        var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+        if( typeof msg.user_name !== 'undefined' ) {
+          $( '.chat-window' ).append('<article class="msg-container msg-self"><div class="msg-box"><div class="flr"><div class="username">You</div><div class="posttime">'+time+'</div></div><div class="messages"><p class="msg" id="msg_0">'+msg.message+'</p></div></div></article>')
+          $( '.chat-window' ).append('<article class="msg-container msg-remote"><div class="msg-box"><div class="flr"><div class="username">Ashia</div><div class="posttime">'+time+'</div></div><div class="messages"><p class="msg" id="msg_1">'+msg.answer+'</p></div></div></article>') 
+          $('.chat-window').stop ().animate ({scrollTop: $('.chat-window')[0].scrollHeight});
+        }
+      })
+
+    </script>
+
+<div class=" chat-icon"> 
+    <!-- /chatbox-->
+    <button class="chat-btn" ><a href ="/">let's chat :)</a></button>
+</div>
+
+</body>
+</html>

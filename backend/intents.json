@@ -251,9 +251,20 @@
 	},
 
 	{
+		"tag": "ily",
+		
+		"patterns": ["i love you","i love you too","ly","lyt","ily"],
+		
+		"responses": ["i love you <3"],
+		
+		"context": [""]
+	
+	},
+
+	{
 		"tag": "mean",
 		
-		"patterns": ["i dont like you","you're ugly","fuck you"],
+		"patterns": ["i dont like you","you're ugly","f u","fu"],
 		
 		"responses": ["hey that's not very nice :(", "you're hurting my feelings :(","i hope letting all this out makes u feel better"],
 		
