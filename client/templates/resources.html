@@ -1,43 +1,72 @@
 {% extends "index.html" %}
 {% block content %}
 
-<div class="row">
-  <div class="col s6 offset-s3">
-    <div class="card-panel teal">
-      <span class="white-text">The following resource provides hotline services outside the region of Trinidad and Tobago.
-        However, there are a number of linked resources and sites available related to any form of abuse that are substantially beneficial and helpful.
-        Please find the ones related to your situation so you can receive the best help</span>
-    </div>
+<style>
+    * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+    .contacts{
+  float: left;
+  }
+  
+  </style>
+
+<div class="container">
+  <div class=" chat-icon" >
+    <button class="chat-btn" ><a href ="/">let's chat :)</a></button>
   </div>
-</div>
 
-{% for r in resources %}
-
-<div class="row">
-  <div class="col s8 offset-s2">
-    <div class="card horizontal">
-      <div class="card-stacked">
-        <div class="card-content">
-          <h2 class="header">{{ r.title }}</h2>
-          <p>
-              {{ r.contact }}
-              <br>
-              {{ r.about }}
-              <div class="card-action">
-                <a href="#"> {{ r.link }} </a>
+<div class="container">
+    <div class="row" style="margin-top: 72px;">
+      <div class="col-md-6">
+        <div class="contacts">
+              <div class="col-md">
+                <br>
+                <h1 style="font-size: 40px; font-style: solid;">Helpful Resources</h1>
+                <br>
+                  <blockquote>
+                  <span style=color:#fff>The following resource provides a number of substantially helpful
+                    <i>linked resources and sites related to any form of abuse.</i>
+                    Please find the ones related to your situation so you can receive the best help:<br>
+                     <!-- open link in new tab-->
+                  <a href="https://www.supportline.org.uk/problems/a-z/" target="_blank" rel="noopener noreferrer">SupportLine</a></span></blockquote>
+                  <br><h3 style=color:#03243d>Local Hotlines:</h3>
               </div>
-          </p>
+
+              <div class="row row-cols-2 row-cols-md-3 g-3 justify-content-evenly">
+                {% for r in resources %}
+
+                <div class="card text-dark bg-light mb-3" style="max-width: 20rem">
+                  <div class="card-header"><h4>{{ r.title }}</h4></div>
+                  <div class="card-body">
+                    <h5 class="card-text" style="font-size: small">
+                      <h4>{{ r.contact }}</h4>
+                      <h6>{{ r.about }}</h6>
+                      <br><h5><a href="{{ r.link }}" target="_blank" rel="noopener noreferrer"> {{ r.link }} </a>
+                    </h5></h5>
+                  </div>
+                </div>
+  
+                {% endfor %}
+              </div>
+              
+              
         </div>
       </div>
+      <div class="col-md-6" >
+        <br><br><br>
+        <div class="map" style="position:fixed">
+          <br><h3 style=color:#03243d>Institutions Near You:</h3>
+          <div class="col-4" >
+            <iframe align="center" width="600" height="350" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/search?q=therapists&key=AIzaSyBT9Z5nuoG9FCzoGVhyCNfe9FKJEAhEHzY"></iframe>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
 </div>
 
-{% endfor %}
-
-<div class="row">
-  <div class="col s4 offset-s4">
-    <iframe align="center" width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/search?q=therapists&key=AIzaSyBT9Z5nuoG9FCzoGVhyCNfe9FKJEAhEHzY"></iframe>
-  </div>
-</div>
 {% endblock %}

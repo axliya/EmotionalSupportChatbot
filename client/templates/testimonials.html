@@ -1,51 +1,100 @@
 {% extends "index.html" %}
 {% block content %}
 
-    <div class="row">
-      <div class="input-field s6 offset-s3">
-        <a href='/addtestimonial' class="waves-effect waves-light btn"><i class="material-icons right">add</i>Add your own testimonial!</a>
+<div class="container">
+  <div class=" chat-icon" >
+    <button class="chat-btn" ><a href ="/">let's chat :)</a></button>
+  </div>
+
+<div class="container">
+    <div class="row justify-content-between" style="margin-top: 72px;">
+
+      <br><br><br><br>
+      <div class="col-6">
+        <div class="input-group mb-3">
+            <form method="POST" class="col-sm" action="/testimonials">
+              <br>
+                <h1 style="font-size: 40px; font-style: solid;">Testimonials</h1>
+                <br>
+                <section><blockquote style=color:#fff>Having doubts? Browse real testimonies submitted by our users to gain reseassurance before 
+                    using the Emotional Support Chatbot:</blockquote>
+                </section>
+                <br><br>
+                <label for="sort"><h4 style=color:#03243d>Sort By</h4></label>
+                <select name="sort" id="sort" class="form-select" aria-label="Default select example">
+                    <h5>
+                        <option value="1">Newest to Oldest</option>
+                        <option value="2">Highest to Lowest Rating</option>
+                        <option value="3">Lowest to Highest Rating</option>
+                    </h5>
+                  </select>
+                  <input class="btn btn-primary" type="submit" value="Submit" name="action" style="font-weight: bold"/>
+            </form>
+        </div>
+
+        
+
+        <div class="row">
+          {% for t in testimonials %}
+        <div class="col-lg-3">
+            <div class="card h-100 text-dark bg-light mb-3">
+                <div class="card-body">
+                 <!-- <h5 class="card-title">Testimony</h5>-->
+                  <p class="card-text" style="color:black; font-size: small;" text-align: center;>
+                    <b>Testimony: </b>
+                    {{ t.text }}
+                    <br>
+                    <br>
+                    <b style="color:black"> Rating: </b>{{ t.rating }}
+                  </p>
+                </div>
+              </div>
+              <br>
+        </div>
+        {% endfor %}
+        </div>
+
+        
+
       </div>
-    </div>
 
-    <div class="row">
-      <div class="input-field s6 offset-s3">
-        <form method="POST" class="col s6 offset-s3" action="/testimonials">
-          <label for="sort">Sort By</label>
-          <br> 
-            <select name="sort" id="sort">
-              <option value="1">Newest to Oldest</option>
-              <option value="2">Highest to Lowest Rating</option>
-              <option value="3">Lowest to Highest Rating</option>
-            </select>
-            <input class="btn waves-effect waves-light blue darken-4" type="submit" value="Submit" name="action"/>
-        </form>
-      </div>
-    </div>
+        
+        <div class="col-6" >
+          <br><br><br><br>
+          <div class="col-5" style="position:fixed; ">
+            <section style="color:#000000">
+              <h3 class="col-sm" >
+                  Add Testimony and Rating:
+              </h3>
+          </section>
+          <div class="input-group mb-3">
+              <form method="POST" action="/addtestimonial" class="col-sm">
+                  <p class="range-field">
+                      <h5><b>Rating: </b> <span id="val"></span></h5>
+                      <input type="range" class="form-range" min="1" max="5" step="1" id="ratings">
+                      </p>
+                      <h6 style="color: #03243dce">Move slider to select a rating from the lowest to highest score of 1-5 </h6>
+                      <br><br>
+                      <h5><b>Testimonial: </b></h5>
+                  <input type="text" class="form-control" id="testimonials" name="testimonials" placeholder="Type testimony here" aria-label="Username" aria-describedby="basic-addon1">
+                  <input class="btn btn-primary" type="submit" value="Submit" name="action" style="font-weight: bold"/>
+              </form>
+          </div>
+          </div>
+        </div>
+      
+    
 
-    <br><br>
-
-{% for t in testimonials %}
-
-<div class="row">
-  <div class="col s6 offset-s3">
-    <div class="card-panel brown lighten-3">
-      <p class="white-text" text-align: center;>
-        {{ t.text }}
-        <br>
-        Rating: {{ t.rating }}
-      </p>
+    <script>
+        var slider = document.getElementById("ratings");
+        var output = document.getElementById("val");
+        output.innerHTML = slider.value;
+        
+        slider.oninput = function() {
+          output.innerHTML = this.value;
+        }
+    </script>
     </div>
   </div>
-</div>
-
-{% endfor %}
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script>
-  $document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('select');
-    var instances = M.FormSelect.init(elems);
-});
-</script>
 
 {% endblock %}

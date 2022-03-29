@@ -3,28 +3,96 @@
 <title>Emotional Support Chatbot</title>
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, intiial-scale=1.0">
     <title>Emotional Support Chatbot</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+<style>
+
+.chat-icon{
+    width: 100px;
+    position: fixed;
+    top: 86%;
+    left:90%;
+    bottom:4%;
+    z-index: 100;
+}
+
+.chat-btn{
+padding: 12px 18px;
+background-color: #1e78ee;
+color: #fff;
+outline: none;
+border: 2px solid #1e78ee;
+font-weight: bold;
+cursor: pointer;
+border-radius: 35px;
+width: 100px;
+font-size: 15px;
+}
+
+.chat-btn a{
+text-decoration:none;
+color:#fff;
+justify-content: center;
+}
+
+html,
+   *{
+              margin: 0;
+              padding: 0;
+              font-family: Roboto 2.0;
+              
+              /*'Abel', sans-serif;*/
+        }
+
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #e9e9f0;
+	border-radius: 5px;
+}
+  
+</style>
+
  </head>
 
-<body>
-<nav>
-    <div class="nav-wrapper teal lighten-4">
-        <a href="#!" class="brand-logo grey-text darken-1">Logo</a>
-        <ul class="right hide-on-med-and-down">
-          <li><a class="grey-text darken-1" href="/about">About Us</a></li>
-          <li><a class="grey-text darken-1" href="/testimonials">Testimonials</a></li>
-          <li><a class="grey-text darken-1" href="/resources">Helpful Resources</a></li>
-          <li><a class="grey-text darken-1" href="/">Home</a></li>
-          </ul>
+
+<body style="background-color:powderblue;">
+
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-inverse bg-dark fixed-top " >
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar "></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
       </div>
-</nav>
+      <div class="collapse navbar-collapse " id="myNavbar">
+        <ul class="nav navbar-nav mb-0">
+          <li><a href="/"><h4>Home</h4></a></li>
+          <li><a href="/resources"><h4>Helpful Resources</h4></a></li>
+          <li><a href="/testimonials"><h4>Testimonials</h4></a></li>
+          <li><a href="/about"><h4>About</h4></a></li>
+        </ul>    
+      </div>
+    </div>
+  </nav>
+
+
+  
 
 <div id="content">{% block content %}{% endblock %}</div>
 
