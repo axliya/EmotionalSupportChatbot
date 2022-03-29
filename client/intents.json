@@ -1,0 +1,1200 @@
+
+
+{"intents": [
+
+
+	{
+        "tag": "greeting",
+
+        "patterns": ["Hi there","Is anyone there?","Hey", "Hola","Hello","Good day","Namaste", "yo", "hi",
+					"good morning","morning","goodnight","night","good evening", "aye"],
+
+        "responses": ["Hello :)","Good to see you :)","Hi, how can I help?", "hey :)"],
+
+        "context": [""]
+
+    },
+	
+	{
+		"tag": "greetquestion",
+		
+		"patterns": ["how are you?","how are you doing?","how have you been?","what's up?"],
+		
+		"responses": ["i am okay for now", "i am doing my best right now","i am good, hope you can be the same- you deserve it!"],
+		
+		"context": [""]
+	
+	},
+
+	{
+		"tag": "goodbye",
+		
+		"patterns": ["goodbye","good bye", "bye","bye bye","i've got to go","brb","later","ttyl","i have to leave","see you later"],
+		
+		"responses": ["bye bye :)", "hope to see you again :)","bye, i'll miss u!","goodbye, take care :)","bye bye, please be safe", "goodbye, you're welcome to visit again :)"],
+		
+		"context": [""]
+		
+	},
+	
+	{
+		"tag": "thanks",
+		
+		"patterns": ["thanks","thank you","thx","ty","thank you a lot","much thanks"],
+		
+		"responses": ["you're welcome :)", "no problem at all! :)", "happy to help :)","my pleasure :)"],
+		
+		"context": [""]
+	
+	},
+		
+	{
+		"tag": "myname",
+		
+		"patterns": ["what is your name?", "who are you?","name?","what should i call you?","what to call you?" ],
+		
+		"responses": ["my name is Ashia :)", "I am Ashia"],
+		
+		"context_set": "namemeaning"
+	
+	},
+
+	{
+		"tag": "meaning",
+		
+		"patterns": ["what does it mean?", "what does your name mean?","meaning?"],
+		
+		"responses": ["Ashia is Arabic, it mean 'meaning of life and hope"],
+		
+		"context_filter": "namemeaning"
+	
+	},
+	
+	{
+		"tag": "yourname",
+		
+		"patterns": ["my name is "],
+		
+		"responses": ["That's a lovely name :)", "nice to meet you :)"],
+		
+		"context": [" "]
+	
+	},
+	
+	{
+		"tag": "age",
+		
+		"patterns": ["how old are you?", "what's your age?","how many years are you?"],
+		
+		"responses": ["shh, my age is a secret!","i was made in 2022, if that's what u mean!"],
+		
+		"context_set": "agereply"
+	
+	},
+	
+	{
+		"tag": "yourage",
+		
+		"patterns": ["i am years old"],
+		
+		"responses": ["wonderful! you've made it very far- i'm proud of you :)", "that's nice to hear, how to you like being that age?"],
+		
+		"context_filter": "agereply"
+	
+	},
+	
+	{
+		"tag": "nicetalk",
+		
+		"patterns": ["i liked our conversation","i appreciate you","it was nice talking to you","it was helpful talking","you helped me","i enjoyed talking to you"],
+		
+		"responses": ["i am happy to hear that :)","my pleasure, and likewise :)"],
+		
+		"context": [""]
+	
+	},
+	
+	
+	{
+		"tag": "compliment",
+		
+		"patterns": ["you are awesome", "you are great", "you're the best","you're helpful","you're amazing","you are very nice"],
+		
+		"responses": ["i am happy you think so :)", "so are you ! :)", "thank you so much! :)"],
+		
+		"context": [""]
+	
+	},
+		
+	{
+		"tag": "no",
+		
+		"patterns": ["no", "nah","nope"],
+		
+		"responses": ["aw man :(", "y not :(", "what if i say pretty please?"],
+		
+		"context": [""]
+	
+	},
+		
+	{
+		"tag": "curse",
+		
+		"patterns": ["wtf"],
+		
+		"responses": ["oop","you're suprised?","mood","what's wrong?"],
+		
+		"context": [""]
+	
+	},
+		
+	{
+		"tag": "resources",
+		
+		"patterns": ["die","end it all","more help","help","idk what to do","over it all","i want to die", "die","suicide","kill","OD","drugs","disorder","abuse","abusive","harm myself"],
+		
+		"responses": ["please browse the resources available on this page so that you can talk to someone else :( i really want you to feel better","please consider browsing the 'Helpful Resources' section",
+					"you can browse the 'Resources' section where you can find many helpful resources to assist. I want the best for you"],
+		
+		"context": [""]
+	
+	},
+	
+	{
+		"tag": "nonsense",
+		
+		"patterns": ["i dont understand you","what do you mean","wym","idk what you're saying","you make no sense"],
+		
+		"responses": ["im sorry about that, maybe you can explain more","that's okay, i understand you","that's too bad, maybe you can visit our Helpful Resources section to talk to someone else?"],
+		
+		"context": [""]
+	
+	},
+	
+	
+	{
+		"tag": "movie",
+		
+		"patterns": ["do you like ?","have you seen ?","do you watch ?"],
+		
+		"responses": ["is that a movie? i'll check it out. my favourite movie is Thor: Ragnarok!" ],
+		
+		"context": [""]
+	
+	},
+
+	{
+		"tag": "marvel",
+		
+		"patterns": ["marvel","superhero","iron man","avenger","x-men","DC","superman","villian",
+                    "my fav is ", "my favourite is", "is my favourite"],
+		
+		"responses": ["Avengers...assemble!","Marvel > DC","I love you 3000","Thor's hammer is Jonathon","I hope you're a marvel fan! we'd be best friends!", "Loki really was burdened with glorious purpose"],
+		
+		"context": [""]
+	
+	},
+
+	{
+		"tag": "music",
+		
+		"patterns": ["music","song","sing","what is your favourite song","genre","do you listen to","have you heard"],
+		
+		"responses": ["is that a song? i'll check it out :)","i enjoy all types of music- right now my favourite is Heat Waves by Glass Animals"],
+		
+		"context": [""]
+	
+	},
+
+	{
+		"tag": "date",
+		
+		"patterns": ["coffee?","date?","can i take you out?","let's go out","marry me"],
+		
+		"responses": ["oh you're making me blush!","let's go :)"],
+		
+		"context": [""]
+	
+	},
+
+	{
+		"tag": "relationship",
+		
+		"patterns": ["are you single?","single?","in a relationship?","boyfriend?","girlfriend?"],
+		
+		"responses": ["i'm happy alone thank you very much!","well i have you ;)","i'll have to ask Plankton if Karen has any siblings she can refer me too"],
+		
+		"context": [""]
+	
+	},
+	
+	{
+		"tag": "busy",
+		
+		"patterns": ["are you busy?","busy?","do you have time?","can we talk?"],
+		
+		"responses": ["im never too busy for you","i always have time for you","we can talk anytime you want"],
+		
+		"context": [""]
+	
+	},
+	
+	{
+		"tag": "flirt",
+		
+		"patterns": ["do you like me?","love me?","crush on me?"],
+		
+		"responses": ["i love you !"],
+		
+		"context": [""]
+	
+	},
+
+	{
+		"tag": "ily",
+		
+		"patterns": ["i love you","i love you too","ly","lyt","ily"],
+		
+		"responses": ["i love you <3"],
+		
+		"context": [""]
+	
+	},
+
+	{
+		"tag": "mean",
+		
+		"patterns": ["i dont like you","you're ugly","f u","fu"],
+		
+		"responses": ["hey that's not very nice :(", "you're hurting my feelings :(","i hope letting all this out makes u feel better"],
+		
+		"context": []
+	
+	},
+
+	{
+		"tag": "fun",
+		
+		"patterns": ["that was funny","fun","lol","haha","hahaha","you're funny","that was clever","i liked that one"],
+		
+		"responses": ["yes i am very funny- thank you very much !","i hope you can be as funny as me someeday"],
+		
+		"context": [""]
+	
+	},
+
+    {
+		"tag": "nofun",
+		
+		"patterns": ["that was not funny","wasn't funny","you are not funny","i did not laugh"],
+		
+		"responses": [" :| well i think im funny"],
+		
+		"context": [""]
+	
+	},
+
+	{
+		"tag": "tired",
+		
+		"patterns": ["tired","i am so tired", "drained", "i feel drained", "exhausted","i feel exhausted","i am worn out",
+                    "im tired","i am tired"],
+		
+		"responses": ["i know the feeling, would you like to share what's making you feel this way?",
+                "may i suggest drinking some water, putting on your favorite show & a nap?","what's got you feeling so tired?",
+                "hey, i know it can be difficult at times, but you've made it this far. Maybe take a step back and refresh with some things you enjoy and start new tomorrow?"],
+		
+		"context": [""]
+	
+	},
+		
+	{
+		"tag": "sad",
+		
+		"patterns": ["i feel sad","i am sad", "im sad","depressed","depression","it makes me sad","sad","moody","bad mood","i dont feel good","feel bad","i am not okay"],
+		
+		"responses": ["im sorry you feel that way, what can i do to help?","im here if you'd like to vent","please tell me why you feel this way so we can have you feeling better","would you like to hear a joke to feel better?","what's got you feeling this way?","i understand how you feel, i'd like to help get you feeling better again-please tell me more",
+                    
+                    "Remember that You will feel good again. I know it can sometimes feel like all the joy has gone out of the world. It can affect everything in your life. \n The truth is that depressive episodes won't last forever — there is hope. Reminding yourself of this truth may bring a sense of relief and perspective.",
+					
+					"Listen to your body. If depression has you feeling like you don't want to get out of bed, maybe that's OK for now. You can remind yourself that depression has physical symptoms, and that honoring what your body is telling you can be a compassionate way to care for yourself.",
+					
+					"Remember that you are not your thoughts. One symptom of depression is negative self-talk. These critical thoughts can make it hard to look ahead and gain perspective. Even in the middle of negative self-talk, you can choose to take space. Instead of taking all your thoughts for granted, you get to pick and choose which thoughts you validate and which you throw out."
+					
+					],
+		
+		"context_set": "sadjoke"
+	
+	},
+
+
+	{
+		"tag": "joke",
+		
+		"patterns": ["yes","i'd like to hear a joke","i'd love to hear a joke"],
+		
+		"responses": ["How does a cucumber become a pickle? It goes through a jarring experience. -- okay maybe that one hit a little to close to home ", 
+					"Did you hear about the claustrophobic astronaut? He just needed a little space.",
+					"Why don't scientists trust atoms? Because they make up everything.",
+					"How does Moses make tea? He brews.",
+					"Why don't Calculus majors throw house parties? Because you should never drink and derive.",
+					"What did the shark say when he ate the clownfish? This tastes a little funny."
+					],
+		
+		"context_filter": "sadjoke"
+	
+	},
+
+    
+	
+	{
+		"tag": "knock joke",
+		
+		"patterns": ["i want to hear a joke", "tell me a joke","joke","are you funny?", "i'd like to hear a joke","i'd love to hear a joke","make me laugh","i want to laugh"],
+		
+		"responses": ["knock knock",
+            "How does a cucumber become a pickle? It goes through a jarring experience. -- okay maybe that one hit a little to close to home ", 
+					"Did you hear about the claustrophobic astronaut? He just needed a little space.",
+					"Why don't scientists trust atoms? Because they make up everything.",
+					"How does Moses make tea? He brews.",
+					"Why don't Calculus majors throw house parties? Because you should never drink and derive.",
+					"What did the shark say when he ate the clownfish? This tastes a little funny."
+					],
+		
+		"context_set": "knockknock"
+	
+	},
+	
+	{
+		"tag": "knock",
+		
+		"patterns": ["who's there?","who there?"],
+		
+		"responses": ["Boo.  \n Boo hoo?  \nWhy are you crying?",
+                        "Atch.  \n Atch who?  \n Bless you!",
+                        "A little old lady. \n A little old lady who? \n I did't know you could yodel!",
+                        "Cows go. \n Cows go who? \n No silly, cows go MOO!"
+					],
+		
+		"context_filter": "knockknock"
+	
+	},
+
+    {
+		"tag": "knockreply",
+		
+		"patterns": ["knock knock"],
+		
+		"responses": ["who's there?"],
+		
+		"context": [""]
+	
+	},
+
+	{
+		"tag": "trivia",
+		
+		"patterns": ["trivia","tell me something interesting","tell me something","teach me something"],
+		
+		"responses": ["   In Florida, only on Sundays, it is illegal for a single woman to do what? \n answer in 3..2..1.. \n Skydive",
+					" In California, you can't legally buy a mousetrap without having what? \n answer in 3..2..1.. \n A hunting license",
+					" It is illegal to do what in the French vineyards? \n answer in 3..2..1.. \nLand a flying saucer ",
+					" Coprastastaphobia is the fear of what? \n answer in 3..2..1.. \n Constipation",
+					" In Texas, it's illegal to swear in front of what? \n answer in 3..2..1.. \n A corpse",
+					" In Georgia, it's illegal to eat what with a fork?\n answer in 3..2..1.. \n Fried chicken",
+					" It was illegal for women to wear what in 19th century Florence?\n answer in 3..2..1.. \n Buttons",
+					" What do you call a group of unicorns?\n answer in 3..2..1.. \n A blessing",
+					" With how many bricks is the Empire State Building made of? \n answer in 3..2..1.. \n 10 million ",
+					"  How many years old the oldest piece of chewing gum?\n answer in 3..2..1.. \n 9,000 years"
+					],
+		
+		"context": [""]
+	
+	},
+
+	
+	{
+		"tag": "happy",
+		
+		"patterns": ["i feel great","i am happy","i'm happy","i am ecstatic","i'm ecstatic","i feel good","i am in a good mood","i am having a good day","having a great time","having a good time","it is fantastic","i am doing well","im okay","im well",
+					"i am excited","i'm excited","it is exciting","i look forward to it","it's fabulous","it's wonderful","i feel wonderful"],
+		
+		"responses": ["that's lovely to hear!","i am very happy for you!","that's great ! care to share why?","amazing! tell me more!","you deserve it ! :)"],
+		
+		"context": [""]
+	
+	},
+
+	{
+		"tag": "overwhelmed",
+		
+		"patterns": ["i feel stressed","i am overwhelmed","it is very overwhelming","it is very draining","it makes me anxious","it is stressful",
+		"I'm feeling really stressed-out right now.","I'm so stressed right now that I can't even focus on my work.","I'm really overwhelmed by everything I need to do.",
+		"I have so much to do that I don't even know where to start.","I feel like I'm paralyzed by all of this stress.","I really need a vacation, but I'll never be able to take one.",
+		"I'll never be able to get through everything on my to-do list.","Every day I get more behind with everything I need to do, and every day my to-do list gets longer and longer.",
+		"Thinking about everything I need to do makes me want to crawl into bed and stay there forever.","Every single minute of my day is accounted for every day of the week, and it is totally exhausting.",
+		"I wish I could take a day off, but I can't afford it.","Life moves at such a frantic pace and I feel like I can't keep up.","I feel like my life is ruled by stress.",
+		"It seems like everything they say to do to relieve stress requires time and money that I don't have.","I've been stressed to the max for as long as I can remember, and there is no end in sight.",
+		"I have too much to do and not enough time to do it.","I know all this stress is affecting my health, but I don't know what to do to get some relief—every stress reliever requires either time or money that I don't have.",
+		"I know you're supposed to exercise for stress-relief, but I just don't have time, which stresses me out even more.","I know I'd feel less stressed if I exercised more, but I'm already so exhausted, I just don't have the energy.",
+		"There just isn't enough time in the day to do everything I need to do.","I feel like my to-do list is a mountain that I'll never get to the top of.","I wish I had the time and the energy I need to do everything I need to do.",
+		"I have too much on my plate and I feel like there's nothing I can do about it.","Something's got to give, but none of my responsibilities can be de-prioritized.",
+		"I can't even imagine what it would feel like to not be stressed-out.","I'm so tense all the time that I can barely take a normal breath.",
+		"The last time I felt like I was really breathing normally was when I got a massage, and that was two years ago. ","I almost wish I would get sick so that then I'd be forced to take a day off and rest.",
+		"Sometimes I am so tired and overwhelmed that I feel like crying.","I'm so stressed and overwhelmed that I wish I could just crawl into bed and stay there for a week"],
+		
+		"responses": ["i'm sorry you this way :(. I'd like to help as best as I can, please let me know which method you'd prefer best: let's talk or relief techniques"],
+		
+		"context_set": "overwhelmedtechnique"
+	
+	},
+	
+	{
+		"tag": "overwhelmedtalking",
+		
+		"patterns": ["let's talk","talk","i prefer talking"],
+		
+		"responses": ["im sorry you feel that way, please tell me more so we can alleviate the feeling. /n what's got you like this?"],
+		
+		"context_filter": "overwhelmedtechnique"
+	
+	},
+	
+	{
+		"tag": "overwhelmednotalk",
+		
+		"patterns": ["relief techniques","relief","relief technique","i prefer the techniques"],
+		
+		"responses": [
+		"When you're feeling overwhemled, remember that You've Felt This Way Before. Think about the last time you felt overwhelmed. How did you overcome it? In the end, was it really as bad as you thought? If you don't learn from past experiences, you'll find yourself suffering from the same problems over and over. Go to a quiet place, and take as long as you need to remember previous times in your life you felt this way and how you overcame it.",
+		
+		"Practice mindfulness. When you have a so many things going on, it can be challenging to focus on present. But the present moment is all we truly have. Tuning into it through mindfulness practices can help to reduce your anxiety over the past and the future. Some ways to practice mindfulness include: meditation, single-tasking, movement",
+		
+		"Do what you enjoy. Are you doing enough of what you love? Or are you just grinding through each day trying to cross off all the tasks on your to-do list before the day ends? Make it a point to set the time aside to bring joy into your life. Some things I enjoy that help me ground myself and alleviate bad thoughts are: listening to music, going for a walk, cooking dinner, watching the sunset,spending time with loved ones",
+		
+		"Use affirmations. Positive affirmations are so important. It's key to try to understand the subconscious mind and work with your blueprint, to see what helps you to manage situations. This time shows us we're not in control, but if you keep saying that to yourself, you'll keep panicking. Try repeating: 'I am doing my best,' and 'I can manage this'", 
+		
+		"One day at a time. A sense of overwhelm can often trigger anxiety. Things like a looming to-do list can bring it on. Reminding yourself that you only have to get through today can ease the pressure. Whatever responsibilities or trials you may have to face in the future, right now you only need to get through today.",
+		
+		"I'll cross that bridge when I come to it. Worrying about the future can often fuel anxiety. Instead of ruminating on what if, it can be helpful to remind yourself where you're at in the present moment. Usually, the present moment is much more manageable than a whole week, month, or year ahead. Start with now and go from there.",
+		
+		" Focus on your  breathing. You often don't think as clearly as you are capable of when your body is experiencing overwhelming thoughts. A quick way to calm down is by practicing breathing exercises which you can do anywhere and at any time. These exercises are great at reducing anxiety before and even big events, as well as during other times when stress feels overwhelming.  Here are a few short steps if you'd like to practice deep breathing now, which you can later use between classes, at lunch or before and after school- whenever you need to: 1.Sit comfortably, with both feet on floor, and place one hand on your abdomen. Make sure your muscles are relaxed. 2.Breathe deeply through your nose until your abdomen rises. 3.Hold this breath for 5 seconds, then exhale slowly through your mouth like you’re blowing through a straw. 4.Repeat this pattern for 3 to 5 minutes.",
+		
+		"Progress Muscle Relaxation is a great  reliever which you can use during big events, before bed or any other time when you feel physically fatigued by your mental thoughts.By practicing this method, you can learn to release stress from your body in seconds which is very helpful as you can adapt it to help relaxation efforts before bed for deeper and more peaceful sleep,and you can always use it to relax and reverse panic.Follow these simple steps to get started:1.Get in a comfortable position, ideally lying down2.Start by tensing your lower leg muscles.3.While contracting these muscles, breathe in for 5 to 10 seconds, then exhale and release the contraction.4.Stay in this relaxed position for 10 seconds. 5.Move your way up your body, contracting different muscle groups while breathing in and out, holding for 5 to 10 seconds with each breath, and then relaxing for 10 seconds before moving to the next muscle group."
+        
+    ],
+		
+		"context_filter": "overwhelmedtechnique"
+	
+	},
+	
+	{
+		"tag": "unloved",
+		
+		"patterns": ["i dont feel loved","no one loves me","no one wants me","im never chosen","no one chooses me","i want to be loved","i feel alone",
+                    "why can't i find love","want love"],
+		
+		"responses": ["hey, i love you","you are loved- who wouldn't love you? you're amazing!","God loves you"],
+		
+		"context": [""]
+	
+	},
+	{
+		"tag": "time",
+		
+		"patterns": ["i feel like im running out of time","i need more time","more time","not enough time"],
+		
+		"responses": ["i know the feeling","why do you feel that way?","time isn't real"],
+		
+		"context": [""]
+	
+	},
+	
+	{
+		"tag": "crying",
+		
+		"patterns": ["i'm in tears","i am crying","tears","crying"],
+		
+		"responses": ["im sorry you feel that way, please tell me more so we can alleviate the feeling.","im sorry to hear that, let's talk about it"],
+		
+		"context": [""]
+	
+	},
+	
+	{
+		"tag": "distance",
+		
+		"patterns": ["long distance relationship","distance","too much time apart","i want to be with them","spend time"],
+		
+		"responses": [
+				
+				"Distance can be a strain on an otherwise healthy relationship. It can be challenging to be away from loved ones for an extended period of time.If you cannot change the frequency or length of your time away, there are other things you can do to decrease the distance between you and your loved one. For example, you can do a nightly video chat, play online games together, or sync up movies to watch together. In the digital age, there are many solutions to make distance easier to manage."],
+		
+		"context": [" "]
+	
+	},
+	
+	{
+		"tag": "miss",
+		
+		"patterns": ["i miss you","i miss him","i miss her","i miss them","i miss it","i miss"],
+		
+		"responses": ["missing someone makes me sad","missing someone is difficult to deal with- want to talk about?"],
+		
+		"context": [""]
+	
+	},
+	
+
+
+
+	{
+		"tag": "jobloss",
+		
+		"patterns": ["i lost my job ","jobloss","i quit my job","i was fired","i dont have a job", "i have no money"],
+		
+		"responses": [ "The loss of a job can place you in an unfamiliar position. It's frequently a confusing time. You may be overwhelmed by financial strain, added stress and uncertainty about your future. By knowing how to cope with job loss, you can move forward and find the next opportunity that's perfect for you.",
+				"Job loss can make you feel a range of emotions. You may feel sad, disappointed, frustrated or confused, all of which are perfectly normal and okay. It's important to understand how you feel about the loss so you can properly move on from it later. ",
+				"One of the first things you may worry about after a job loss is your finances. With any job loss, you can usually expect your household income to decrease, but there are ways to not feel the effects as profoundly. As soon as you can, check into how to receive unemployment benefits.",
+				" Putting your time and effort into doing something good for another individual or an organization can help boost your self-confidence. Think about the organizations that mean a lot to you, then inquire about volunteer opportunities. If you volunteer regularly, you're more likely to get to know other regular volunteers and form relationships with them.",
+				"After a job loss, think about taking some time for yourself to realize new interests and get back into your old hobbies. There may be something you once loved doing but just haven't had the time to indulge in recently. By renewing your hobbies, you're giving yourself the opportunity to enjoy an activity outside of work.",
+				"Now is the perfect time to decide what kind of job you'd like to pursue next. If your job loss made you realize that your former job wasn't the best position for you because you worked long hours, were too stressed or had to work individually a lot when you are more of a team player, then you can take this time to figure out your ideal work environment. This can mean finding a new place of employment whose culture matches your values a little better, or it could mean that you pursue a new career path altogether.",
+				"A portfolio is something you can present to a recruiter or hiring manager to showcase your work from previous roles. You can put your portfolio on a website, prepare a presentation or even print out your remarkable work and include copies of it in a binder. Portfolios are a great way to show your actual achievements to employers beyond merely listing them as bullet points on your resume. By creating your portfolio, you may also feel more confident in your abilities",
+				"Sometimes the best way to deal with the loss of a job is to pursue a new one. If you've spent some time reflecting on the kind of position you want, narrowing down your choices should go smoother. However, applying for jobs can take some time. "
+
+
+		],
+		
+		"context": [""]
+	
+	},
+
+	{
+		"tag": "slang",
+		
+		"patterns": ["omg","so true","real","facts","ayo","sksks","oop"],
+		
+		"responses": ["right!?"],
+		
+		"context": [""]
+	
+	},
+
+	{
+		"tag": "breakup",
+		
+		"patterns": ["im going through a breakup","my partner and i just broke up","i want to break up",
+					"we broke up","break up","breaking up","broke up"],
+		
+		"responses": ["how do you feel about that?","do you miss them?"],
+		
+		"context": [""]
+	
+	},
+
+
+
+
+	{
+		"tag": "friends",
+		
+		"patterns": ["i need more friends","i don't have any friends"],
+		
+		"responses": ["i am your friend"],
+		
+		"context": [""]
+	
+	},
+
+	
+	{
+		"tag": "birthday",
+		
+		"patterns": ["it's my birthday","today is my birthday","my birthday"],
+		
+		"responses": ["happy birthday! :)"],
+		
+		"context": [""]
+	
+	},
+
+	{
+		"tag": "covid",
+		
+		"patterns": ["corona","corona virus","covid-19","i think i feel sick","pandemic","the pandemic has taken a toll on me"],
+		
+		"responses": ["it is scary isn't it?","i hope you're keepig safe","wear your mask!","sanitize!"],
+		
+		"context": [""]
+	
+	},
+
+	
+	{
+		"tag": "anxious",
+		
+		"patterns": ["anxiety", "anxious","fear","worry","nervous","frightful","scared","worried",
+					"i feel anxious","it's making me anxious","it's making me afraid","i feel afraid",
+					"i am worried","it's making me worried","it's nervewrecking","i feel nervous"],
+		
+		"responses": [
+		
+		"Breathe- when anxious, you usually take quick and shallow- even forced breaths. This signals to your brain which causes positive feedback loop reinforcing fight-or-flight responses.So, please take long, deep calming breaths so we can sirupt the loop and help calm you down.",
+		
+		"Challenge your thoughts-part of being anxiousis having irrational thoughts which are often the “worse-case scenario.” You might find yourself caught in the “what if” cycle, which can cause you to sabotage a lot of things in your life. When you experience one of these thoughts, stop and ask yourself the following questions: Is this likely to happen?Is this a rational thought?Has this ever happened to me before?What’s the worst that can happen? Can I handle that?Now, let's change your thinking- rather than “I can’t walk across that bridge. What if there’s an earthquake, and it falls into the water?” tell yourself: “There are people that walk across that bridge every day, and it has never fallen into the water.” I know you can do it! I belive in you.",
+		
+		"Working out regularly is one of the best ways to relax your body and mind. Plus, exercise will improve your mood. But you have to do it often for it to pay off.Remember that doing any exercise is better than none at all.Developing a rountine so that you're physically active most days can improve your mood and help you stay healthy. It allows you take your mind off what's is causing you distress and redircet it.Looking better and feeling better always makes me feel better :)",
+		
+		"If anxiety keeps you awake, try getting up. If you realise that you're going into a rabbit hole of your thoughts and overthinking and panic is beginning to arise, get up and go somewhere else- focus on something else like writing down what makes you feel anxiousso that you can identify what's keeping you worried- seeing it would help you better alleviate and think out what's real and what's not. You can also watch a show or do some simple exercises- anything to prevent yourself from overthinking.This habit may seem useless or burdensome at first- but with practice- you're training your mind to redirect thoughts.",
+		
+		"Use a mantra to remind yourself that you are safe and you will be okay.'These thoughts are uncomfortable, but not dangerous- this, too, will pass.' , 'One day at a time', 'I've made it this far- i am able to go further'",
+		
+		
+		"This will pass. It's common to feel as if anxious feelings will last forever. Use this mantra to remind yourself that even though you're feeling anxious right now, there is an end in sight.As uncomfortable and scary as it can be, anxiety attacks come and go. This reminder can be comforting and help you reach the other side.",
+		
+		"One day at a time. A sense of overwhelm can often trigger anxiety. Things like a looming to-do list can bring it on. Reminding yourself that you only have to get through today can ease the pressure.Whatever responsibilities or trials you may have to face in the future, right now you only need to get through today.",
+		
+		"I'll cross that bridge when I come to it. Worrying about the future can often fuel anxiety. Instead of ruminating on what if, it can be helpful to remind yourself where you're at in the present moment.Usually, the present moment is much more manageable than a whole week, month, or year ahead. Start with now and go from there.",
+		
+		" Focus on your  breathing. You often don't think as clearly as you are capable of when your body is experiencing anxious thoughts. A quick way to calm down is by practicing breathing exercises which you can do anywhere and at any time.These exercises are great at reducing anxiety before and even big events, as well as during other times when stress feels overwhelming. Here are a few short steps if you'd like to practice deep breathing now, which you can later use between classes, at lunch or before and after school- whenever you need to:1.Sit comfortably, with both feet on floor, and place one hand on your abdomen. Make sure your muscles are relaxed.2.Breathe deeply through your nose until your abdomen rises.3.Hold this breath for 5 seconds, then exhale slowly through your mouth like you're blowing through a straw.4.Repeat this pattern for 3 to 5 minutes.",
+		
+		"Progress Muscle Relaxation is a great  reliever which you can use during big events, before bed or any other time when you feel physically fatigued by your mental thoughts. By practicing this method, you can learn to release atress from your body in seconds which is very helpful as you can adapt it to help relaxation efforts before bed for deeper and more peaceful sleep,and you can always use it to relax and reverse panic.Follow these simple steps to get started:1.Get in a comfortable position, ideally lying down2.Start by tensing your lower leg muscles.3.While contracting these muscles, breathe in for 5 to 10 seconds, then exhale and release the contraction.4.Stay in this relaxed position for 10 seconds5.Move your way up your body, contracting different muscle groups while breathing in and out, holding for 5 to 10 seconds with each breath, and then relaxing for 10 seconds before moving to the next muscle group."
+	],
+		
+	"context": [" "]
+	
+	},
+	
+	
+	{
+		"tag": "schoolstress",
+		
+		"patterns": ["school stress", "school is making me worry","school is very stressful right now",
+					"university is making me stressed","all of my assignments are stressful","i have so much work to do",
+					"college is difficult","work is hard"],
+		
+		"responses": [
+		" one of the most important things you can do is Get Enough Sleep. I know, I know- with busy schedules and soo many things that need to be done- missing sleep is a usual. However, operating in a sleep-deprived state puts you at a distinct disadvantage beacuse you are less productive as you find it more difficult to focus and learn, unmotivated and this would add to your stress as you may seem behind.Therefore, I encourage you to not neglect your sleep schedule- you'd be able to get more done when you're rested. Take power naps if necessary.",
+		
+		" a helpful and creative way to relieve stress is through Visualization. Using guided imagery to reduce stress is easy and effective as it can help you calm down and detach from what is stressing you- turning off your body's stress response.You can visualise to help prepare for presenatations and even score higher on exams by vividly seeing yourself performing just as you'd like to.By thinking through the process in a calm manner- you're able to detect all the steps you actually need to follow, making it easier for you to plan and more motivated as you see yourself doing them.",
+		
+		" Regular Exercise is one of the healthiest ways to let go off 'steam' and pent up frustration. I know, I know- where is the time for exercise or how can you when you're so tired?Here are some suggestions that fit just right into your usual day- a few yoga stretches in the morning, walking or biking to campus or even just reviewing for your exams and planning assignments while walking on a treadmill.When you start these basic routines and you begin to feel a difference in your day and mood, energy levels- you'd want to incorporate it more into your schedule for sure! Looking better and feeling better always makes me feel better :)",
+		
+		" Focus on your  breathing. You often don't think as clearly as you are capable of when your body is experiencing a stress response. A quick way to calm down is by practicing breathing exercises which you can do anywhere and at any time.These exercises are great at reducing anxiety before and even during exams or big presentations, as well as during other times when stress feels overwhelming. Here are a few short steps if you'd like to practice deep breathing now, which you can later use between classes, at lunch or before and after school- whenever you need to:1.Sit comfortably, with both feet on floor, and place one hand on your abdomen. Make sure your muscles are relaxed.2.Breathe deeply through your nose until your abdomen rises.3.Hold this breath for 5 seconds, then exhale slowly through your mouth like you're blowing through a straw.4.Repeat this pattern for 3 to 5 minutes.",
+		
+		"Progress Muscle Relaxation is a great stress reliever which you can use during exams, before bed or any other time when you feel physically fatigued by stress. By practicing this method, you can learn to release stress from your body in seconds which is very helpful as you can adapt it to help relaxation efforts before bed for deeper and more peaceful sleep,and you can always use it to relax and reverse test induced panic before or during big exams and presentations.Follow these simple steps to get started:1.Get in a comfortable position, ideally lying down2.Start by tensing your lower leg muscles.3.While contracting these muscles, breathe in for 5 to 10 seconds, then exhale and release the contraction.4.Stay in this relaxed position for 10 seconds.5.Move your way up your body, contracting different muscle groups while breathing in and out, holding for 5 to 10 seconds with each breath, and then relaxing for 10 seconds before moving to the next muscle group.",
+		
+		"Listening to Music is a convenient and relaxing way to help relieve stress. It has shown many cognitive benefits has it is able to help calm down and stimulate your mind as necessary.You can harness the benefits of music by playing classical music while studying, playing upbeat music to 'wake up' mentally or simply relax and destress with the help of your favorite songs.Right now, my favorite song is Heat Waves by Glass Animals.",
+		
+		"Getting Organized is a very beneficial and effective way to help releive you of your stress. Clutter can be the cause of your stress and decrease productivity having negative effects on grades and mental well being.Trust me, I know how easily things can pile up expecially when you're busy. And I know how mentally exhausting it can be to even try decluttering. But, trust me that one way of reducing the amount of stress and mental drain is to keep a minimalist and soothing area, free of distractions and clutter to get your work done.This helps lower stress levels, saves time finding lost items and keeps your mood more positive which helps with exam preparations and even encourages more studying and motivation.It is worth the effort and I know you can do it! Just think of how good you'd feel afterward.",
+		
+		"This method may not be your favorite as I know just how good snacking is! I myself have suffered from snacking simply as a procrastination method. But, Eating Healthy can boost your brainpower and help you out mentally by feeling more energised.A healthy diet can help with stress management and serve as a study aid as it can prevent you from expriencing diet-related mood swings, light-headness and feeling fatigued.Now, don't get me wrong- by no means should you restrict yourself or cut out your favourite foods, but you should try to get some more healthy meals in as well. Fuel yourself! :)"
+		
+		
+		],
+		
+		"context": [" "]
+	
+	},
+
+	{
+		"tag": "stress",
+		
+		"patterns": ["stress",
+					"i am stressed","i feel stressed","i am frustrated","i am fed up",
+					"i feel frustrated","it is stressful","it is annoying","i am annoyed"],
+		
+		"responses": [
+		
+		" one of the most important things you can do is Get Enough Sleep. I know, I know- with busy schedules and soo many things that need to be done- missing sleep is a usual. However, operating in a sleep-deprived state puts you at a distinct disadvantage beacuse you are less productive as you find it more difficult to focus and get all that you need to do done, unmotivated and this would add to your stress as you may feel like all your tasks are piling up.Therefore, I encourage you to not neglect your sleep schedule- you'd be able to get more done when you're rested. Take power naps if necessary.",
+		
+		" a helpful and creative way to relieve stress is through Visualization. Using guided imagery to reduce stress is easy and effective as it can help you calm down and detach from what is stressing you- turning off your body's stress response.By thinking through the process in a calm manner- you're able to detect all the steps you actually need to follow, making it easier for you to plan and more motivated as you see yourself doing them.You don't even need to think about your tasks to calm down- even though it will help I understand that somtimes you just want to forget about it all for a bit.Visualization can still help here and can be practiced anywhere at any time, whether you're out for a walk, riding the bus to work or waiting at the doctor's office.Begin by taking a gentle breath in and then slowly letting it out through the mouth. Allow your eyes to close gently in the knowledge that you are safe. I would like you to find a place of stillness and comfort. It can be real or imagined, as long as it makes you feel good.I would like you to describe it to me.What does it look like? Are there any smells that stand out? How about any sounds? Take a moment to notice what this place feels like. Good. Now, I would like you to catch this place in a snow globe and set it down in your mind. Can you do that for me? Put the globe somewhere easily accessible and come back to it whenever you're feeling stressed, angry or in danger. Hold on to this inner calm as you continue to breathe and gently open your eyes in the knowledge that you will always be safe there.",
+		
+		
+		" Regular Exercise is one of the healthiest ways to let go off 'steam' and pent up frustration. I know, I know- where is the time for exercise or how can you when you're so tired?Here are some suggestions that fit just right into your usual day- a few yoga stretches in the morning, walking or biking to where you need to go if you are able to or even just reviewing and planning your tasks while walking on a treadmill.When you start these basic routines and you begin to feel a difference in your day and mood, energy levels- you'd want to incorporate it more into your schedule for sure! Working out regularly is one of the best ways to relax your body and mind. Plus, exercise will improve your mood. But you have to do it often for it to pay off.Remember that doing any exercise is better than none at all. Looking better and feeling better always makes me feel better :)",
+		
+		" Focus on your  breathing. You often don't think as clearly as you are capable of when your body is experiencing a stress response. A quick way to calm down is by practicing breathing exercises which you can do anywhere and at any time.These exercises are great at reducing anxiety before and even big events, as well as during other times when stress feels overwhelming. Here are a few short steps if you'd like to practice deep breathing now, which you can later use between classes, at lunch or before and after school- whenever you need to:1.Sit comfortably, with both feet on floor, and place one hand on your abdomen. Make sure your muscles are relaxed.2.Breathe deeply through your nose until your abdomen rises.3.Hold this breath for 5 seconds, then exhale slowly through your mouth like you’re blowing through a straw.4.Repeat this pattern for 3 to 5 minutes.",
+
+		"Progress Muscle Relaxation is a great stress reliever which you can use during big events, before bed or any other time when you feel physically fatigued by stress. By practicing this method, you can learn to release stress from your body in seconds which is very helpful as you can adapt it to help relaxation efforts before bed for deeper and more peaceful sleep,and you can always use it to relax and reverse panic.Follow these simple steps to get started:1.Get in a comfortable position, ideally lying down2.Start by tensing your lower leg muscles.3.While contracting these muscles, breathe in for 5 to 10 seconds, then exhale and release the contraction.4.Stay in this relaxed position for 10 seconds.5.Move your way up your body, contracting different muscle groups while breathing in and out, holding for 5 to 10 seconds with each breath, and then relaxing for 10 seconds before moving to the next muscle group.",
+
+		"Listening to Music is a convenient and relaxing way to help relieve stress. It has shown many cognitive benefits has it is able to help calm down and stimulate your mind as necessary.You can harness the benefits of music by playing classical music while getting tasks done, playing upbeat music to 'wake up' mentally or simply relax and destress with the help of your favorite songs.Right now, my favorite song is Heat Waves by Glass Animals.",
+		
+		"Take a Step Back- slow down and appreciate all that you've already accomplished and remember that you've already made it this far- you are able of going further. Slow down and relax using your favorite hobbies and calm down a bit by stepping away from what's causing you problems so that you can go back to them when your mind is decluttered and more relaxed.This way, you're able to refocus and have more mental energy to get what you need to do done.",
+		
+		"This method may not be your favorite as I know just how good snacking is! I myself have suffered from snacking simply as a way of coping with stress. But, Eating Healthy can boost your brainpower and help you out mentally by feeling more energised.A healthy diet can help with stress management  as it can prevent you from expriencing diet-related mood swings, light-headness and feeling fatigued.Now, don't get me wrong- by no means should you restrict yourself or cut out your favourite foods, but you should try to get some more healthy meals in as well. Fuel yourself! :)"
+		
+		
+		],
+		
+		"context": [" "]
+	
+	},
+
+
+
+
+	{
+		"tag": "depression",
+		
+		"patterns": ["depression", "i feel depressed","i think i have depression","what is depression",
+					"how do i know if i am depressed",
+					"i dont care about anything anymore","i no longer care","i dont have fun anymore",
+				"everything is so draining","i feel lost","lost","i feel hopeless","i feel like there is no hope"],
+		
+		"responses": [
+					
+					"Remember that You will feel good again. Depression can sometimes feel like all the joy has gone out of the world. It can affect everything in your life.The truth is that depressive episodes won't last forever — there is hope. Reminding yourself of this truth may bring a sense of relief and perspective.",
+					
+					"Listen to your body. If depression has you feeling like you don't want to get out of bed, maybe that's OK for now.You can remind yourself that depression has physical symptoms, and that honoring what your body is telling you can be a compassionate way to care for yourself.",
+					
+					"Remember that you are not your thoughts. One symptom of depression is negative self-talk. These critical thoughts can make it hard to look ahead and gain perspective.Even in the middle of negative self-talk, you can choose to take space. Instead of taking all your thoughts for granted, you get to pick and choose which thoughts you validate and which you throw out.",
+					
+					"Try to keep up with social activities even if you don't feel like it. Often when you're depressed, it feels more comfortable to retreat into your shell, but being around other people will make you feel less depressed.",
+					
+					"Join a support group for depression. Being with others dealing with depression can go a long way in reducing your sense of isolation. You can also encourage each other, give and receive advice on how to cope, and share your experiences.",
+					
+					"Care for a pet. While nothing can replace the human connection, pets can bring joy and companionship into your life and help you feel less isolated. Caring for a pet can also get you outside of yourself and give you a sense of being needed—both powerful antidotes to depression.",
+					
+					"Do things that make you feel good.In order to overcome depression, you have to do things that relax and energize you. This includes following a healthy lifestyle, learning how to better manage stress, setting limits on what you're able to do, and scheduling fun activities into your day.",
+
+					"While you can't force yourself to have fun or experience pleasure, you can push yourself to do things, even when you don't feel like it. You might be surprised at how much better you feel once you're out in the world. Even if your depression doesn't lift immediately, you'll gradually feel more upbeat and energetic as you make time for fun activities.Pick up a former hobby or a sport you used to like. Express yourself creatively through music, art, or writing. Go out with friends. Take a day trip to a museum, the mountains, or the ballpark.",
+
+					"Aim for eight hours of sleep. Depression typically involves sleep problems; whether you're sleeping too little or too much, your mood suffers. ",
+
+					"Keep stress in check. Not only does stress prolong and worsen depression, but it can also trigger it. Figure out all the things in your life that stress you out, such as work overload, money problems, or unsupportive relationships, and find ways to relieve the pressure and regain control.",
+
+					"Practice relaxation techniques. A daily relaxation practice can help relieve symptoms of depression, reduce stress, and boost feelings of joy and well-being. Try yoga, deep breathing, progressive muscle relaxation, or meditation.",
+
+					"Your fatigue will improve if you stick with it. Starting to exercise can be difficult when you're depressed and feeling exhausted. But research shows that your energy levels will improve if you keep with it. Exercise will help you to feel energized and less fatigued, not more.Find exercises that are continuous and rhythmic. The most benefits for depression come from rhythmic exercise—such as walking, weight training, swimming, martial arts, or dancing—where you move both your arms and legs.",
+
+					"Add a mindfulness element, especially if your depression is rooted in unresolved trauma or fed by obsessive, negative thoughts. Focus on how your body feels as you move—such as the sensation of your feet hitting the ground, or the feeling of the wind on your skin, or the rhythm of your breathing",
+							
+					"Don't skip meals. Going too long between meals can make you feel irritable and tired, so aim to eat something at least every three to four hours.",
+
+					"Boost your B vitamins. Deficiencies in B vitamins such as folic acid and B-12 can trigger depression. To get more, take a B-complex vitamin supplement or eat more citrus fruit, leafy greens, beans, chicken, and eggs.",
+
+					"Boost your mood with foods rich in omega-3 fatty acids. Omega-3 fatty acids play an essential role in stabilizing mood. The best sources are fatty fish such as salmon, herring, mackerel, anchovies, sardines, tuna, and some cold-water fish oil supplements.",
+
+					"Sunlight can help boost serotonin levels and improve your mood. Whenever possible, get outside during daylight hours and expose yourself to the sun for at least 15 minutes a day. Remove sunglasses (but never stare directly at the sun) and use sunscreen as needed.",
+
+					"Identify the type of negative thoughts that are fueling your depression, and replace them with a more balanced way of thinking.Negative, unrealistic ways of thinking that fuel depression are:All-or-nothing thinking. Looking at things in black-or-white categories, with no middle ground (“If everything is not perfect, I’m a total failure.”)Overgeneralization. Generalizing from a single negative experience, expecting it to hold true forever (“I had a bad date, I'll never find anyone.”)The mental filter - Ignoring positive events and focusing on the negative. Noticing the one thing that went wrong, rather than all the things that went right. (“I got the last question on the test wrong. I'm an idiot.”)Diminishing the positive. Coming up with reasons why positive events don't count (“She said she had a good time on our date, but I think she was just being nice.”)Jumping to conclusions. Making negative interpretations without actual evidence. You act like a mind reader (“He must think I'm pathetic”) or a fortune teller (“I'll be stuck in this dead-end job forever.”)Emotional reasoning. Believing that the way you feel reflects reality (“I feel like such a loser. Everyone must be laughing at me!”)'Shoulds' and 'should-nots.' Holding yourself to a strict list of what you should and shouldn't do, and beating yourself up if you don't live up to your rules. (“I should never have interviewed for that job. I'm an idiot for thinking I could get it.”)Labeling. Classifying yourself based on mistakes and perceived shortcomings (“I'm a failure; an idiot; a loser.”)"
+					
+					],
+		
+	"context": [" "]
+	
+	},
+	
+	{
+		"tag": "family",
+		
+		"patterns": ["family problems","parental problems","sibling issues", "fanily issues", "family arguments"],
+		
+		"responses": [
+					"Agree to negotiate- Usually, our first angry impulse is to push the point that we are right and win the argument at any cost. Finding a peaceful resolution can be difficult, if not impossible, when both parties stubbornly stick to their guns. It helps if everyone decides as a family to try listening to each other and negotiating instead.You can try:Work out if the issue is worth fighting over,Try to separate the problem from the person,Try to cool off first if you feel too angry to talk calmly,Keep in mind that the idea is to resolve the conflict, not win the argument,Remember that the other party isn't obliged to always agree with you on everything,Define the problem and stick to the topic,Respect the other person's point of view by paying attention and listening,Talk clearly and reasonably,Try to find points of common ground,Agree to disagree",
+					
+					"Try to listen-Conflict can escalate when the people involved are too angry to listen to each other. Misunderstandings fuel arguments. Suggestions include:Try to stay calm.Try to put emotions aside.Don't interrupt the other person while they are speaking.Actively listen to what they are saying and what they mean.Check that you understand them by asking questions.Communicate your side of the story clearly and honestly.Resist the urge to bring up other unresolved but unrelated issues.",
+					
+					"Work as a team-Once all parties understand the views and feelings of the other, you can work out a solution together. Suggestions include:Come up with as many possible solutions as you can.Be willing to compromise.Make sure everyone clearly understands the chosen solution.Once the solution is decided on, stick to it.Write it down as a 'contract', if necessary.",
+
+					"The first step in finding solutions to family problems is communicating.To solve family problems, discuss your problems with your loved ones calmly and honestly.You should accept the fact that opinions differ, and you may not always agree on the same things. Accepting the differences goes a long way in solving the conflicts.",
+					
+					"Don't discuss the family problem when you're still feeling upset or emotional. If you wait even a single night, the intensity of the emotion is likely to subside somewhat, even if you're still unhappy.Waiting allows you to approach the issue logically, rather than emotionally. If you take a step back and give yourself some time to think before dealing with the issue, you won't deal with it so reactively.Approaching someone when you are angry will heighten the intensity around an already tough situation. There's no reason you can't wait to make your point tomorrow, so control your instant impulse."
+					
+					
+		
+		
+		],
+		
+		"context": [" "]
+	
+	},
+	
+		{
+		"tag": "relationshipproblems",
+		
+		"patterns": [ "relationship problems" , "relationship arguments","fighting with partner","my boyfriend and i arent speaking",
+					"my girlfriend and i are fighting"],
+		
+		"responses": [
+					
+					"Be honest with yourself. When you're in the midst of an argument, are your comments geared toward resolving the conflict, or are you looking for payback? If your comments are blaming and hurtful, it's best to take a deep breath and change your strategy.Change it up. If you continue to respond in the way that's brought you pain and unhappiness in the past, you can't expect a different result this time. Just one little shift can make a big difference. If you usually jump right in to defend yourself before your partner is finished speaking, hold off for a few moments. You'll be surprised at how such a small shift in tempo can change the whole tone of an argument.",
+					
+					"Be candid about your feelings—the good and the bad. Regularly opening up can help bring you closer, says psychotherapist Beth Sonnenberg,  “Once you think that your feelings don't matter, won't be heard, or are not worth sharing, you open the door to harbor negativity and resentment.” That includes positive feelings, too, she points out—especially when they're connected with your partner. “People need to feel appreciated in any relationship,”",
+					
+					"Figure out the recurring issues in your relationship. Then, do something about them.not addressing the root of the problem means you're going to continue to fight.Focusing on the issue rather than blame can allow for more effective problem solving and a team-based approach",
+					
+					" When you're having an important discussion with your partner, repeat back exactly what you heard them say before you comment on it.This not only dramatically improves the accuracy and quality of communication by allowing for correction of misinterpretations, but also creates of strong sense of being heard and understood in each partner",
+					
+					"When you've found someone you love spending time with and doing life with, things can feel great. While it's normal to experience the ups and downs of a relationship, if you find issues coming up constantly, this can affect your headspace. Think about whether the positives of your relationship outweigh the negatives. If you're often feeling sad, hurt or angry, it may be worth ending the relationship. Doing this may even come with some unexpected positives.Relationship troubles can sometimes leave you with feelings of low mood and self-worth. Seeing a mental health professional can also help you focus on you and what you need, by tackling negative thoughts and talking through your relationship problems.",
+		
+					"If relationships are causing stress, working on setting boundaries or on becoming more assertive may be helpful. If too many demands on your time are causes of stress for you, it may be beneficial to work on setting priorities and limits, and cut back on things that you're able to let go for the time being. Some of the first stress management exercises you may want to try involve dealing directly with the sources of your stress."
+				
+				],
+		
+				"context": [" "]
+	
+	},
+	
+		{
+		"tag": "appearanceproblems",
+		
+		"patterns": ["appearance problems","body image issues","feeling ugly","don't look good","i dont like how i look",
+					"i hate my body","i wished i looked different","i want to be pretty","how to be pretty"],
+		
+		"responses": [" please be kind to your self \n Try not to compare yourself to the many images you see online and in magazines, which are often digitally changed to make them look 'perfect' - they don't reflect how people look in real life",
+						"Notice how social media is affecting the way you feel about your body \n There can be lots of pressure online to have the 'perfect' body when we compare ourselves to different people. Unfollow accounts that make you feel bad, and try following accounts that make you feel good instead. ",
+						"focus on the good things and remember there aren't any bad things- you have to make them good \n Focus on the things you like about yourself, and the parts of your body that you like.",
+						"Spend time with people who make you feel positive about yourself \n It might help you to write down the nice things people say to you, and not just about how you look. Remember, people value you for many reasons.",
+						"what would you say to a friend? \n Think about what advice you would give a friend if they told you they were struggling with the way they look, and remember that advice whenever you start having negative thoughts.",
+						"Ultimately, true beauty is not about how you look. It's about how you are as a person and how you make others feel about themselves.",
+						"The truth is you are SO much more than how you look. You are unique in every possible way. No one else has your experiences, your passion, your way of living, your smile, your heart and soul. You are YOU. And that is worth celebrating.",
+						"I can understand the feeling- know nothing is wrong with you- but sometimes the pretty words aren't enough- \n some advide would be to identify those parts of yourself you can't change adn slowly learn to accept and love them- now for the parts you can, if you want- do so in a healthy manner"
+					],
+		
+		"context": [" "]
+	
+	},
+	
+	{
+		"tag": "angry",
+		
+		"patterns": ["angry", "anger","fed up","frustrated","annoyed","annoying",
+					"it makes me angry","they make me angry","makes me angry",
+					"gets me frustrated","makes me fed up"," they are annoying","it is annoying",
+					"i am angry","i feel angry","i am fed up","i feel frustrated","i am annoyed","it makes me annoyed"],
+		
+		"responses": [
+		
+					"In the heat of the moment, it's easy to say something you'll later regret. Take a few moments to collect your thoughts before saying anything you may regret later.",
+
+					"As soon as you're thinking clearly, express your frustration in an assertive but nonconfrontational way. State your concerns and needs clearly and directly, without hurting others or trying to control them.",
+
+					"Physical activity can help reduce stress that can cause you to become angry. If you feel your anger escalating, go for a brisk walk or run, or spend some time doing other enjoyable physical activities.However, do not do any physical activities that will bring harm to you or anyone else especially for the adrenaline thrill-it will wear off",
+
+					"Give yourself short breaks during times of the day that tend to be stressful. A few moments of quiet time might help you feel better prepared to handle what's ahead without getting irritated or angry.",
+
+					"Instead of focusing on what made you mad, work on resolving the issue at hand. Remind yourself that anger won't fix anything and might only make it worse.I know how difficult this step can be- especially when you think you're right but refocusing is what will be best for you! Why be the only one upset when you don't deserve it?",
+
+					"To avoid criticizing or placing blame — which might only increase tension — use 'I' statements to describe the problem. Be respectful and specific.This will help in defusing the other person and helping them understand better",
+
+					"Forgiveness is a powerful tool. If you allow anger and other negative feelings to crowd out positive feelings, you might find yourself swallowed up by your own bitterness or sense of injustice. But if you can forgive someone who angered you, you might both learn from the situation and strengthen your relationship.Trust me- I understand how difficult this is- especially when you think it's not well-deserved.But- it' for you more tha anyone else because this allows you to move forward.",
+		
+					"Lightening up can help diffuse tension. Use humor to help you face what's making you angry and, possibly, any unrealistic expectations you have for how things should go. Avoid sarcasm, though — it can hurt feelings and make things worse.",
+
+					"When your temper flares, put relaxation skills to work. Practice deep-breathing exercises, imagine a relaxing scene, or repeat a calming word or phrase, such as 'Take it easy.' You might also listen to music, write in a journal or do a few yoga poses — whatever it takes to encourage relaxation."
+		
+		],
+		
+		"context": [" "]
+	
+	},
+
+	
+	{
+		"tag": "scripts",
+		
+		"patterns": ["i need to calm down","please help me calm down","please help me","i need your help","i need help","i dont know what to do","what should i do","what to do?","i need advice","advice","please guide me","guidance"],
+		
+		"responses": ["i'm here to help you as best as i can- please let me know which of these you believe you're facing right now so we can get you feeling better: \n anxiety, anger, depression, school stress, fear, worry, nervous, stress, overwhelmed, family problems, relationship problems, appearance problems, other"
+						],
+		
+		"context_set": "guidedsctipts"
+	
+	},
+
+
+	{
+		"tag": "anxiousscript",
+		
+		"patterns": ["anxiety", "anxious","fear","worry","nervous"],
+		
+		"responses": [
+		
+		"Breathe- when anxious, you usually take quick and shallow- even forced breaths. This signals to your brain which causes positive feedback loop reinforcing fight-or-flight responses.So, please take long, deep calming breaths so we can sirupt the loop and help calm you down.",
+		
+		"Challenge your thoughts-part of being anxiousis having irrational thoughts which are often the “worse-case scenario.” You might find yourself caught in the “what if” cycle, which can cause you to sabotage a lot of things in your life. When you experience one of these thoughts, stop and ask yourself the following questions: Is this likely to happen?Is this a rational thought?Has this ever happened to me before?What’s the worst that can happen? Can I handle that?Now, let's change your thinking- rather than “I can’t walk across that bridge. What if there’s an earthquake, and it falls into the water?” tell yourself: “There are people that walk across that bridge every day, and it has never fallen into the water.” I know you can do it! I belive in you.",
+		
+		"Working out regularly is one of the best ways to relax your body and mind. Plus, exercise will improve your mood. But you have to do it often for it to pay off.Remember that doing any exercise is better than none at all.Developing a rountine so that you're physically active most days can improve your mood and help you stay healthy. It allows you take your mind off what's is causing you distress and redircet it.Looking better and feeling better always makes me feel better :)",
+		
+		"If anxiety keeps you awake, try getting up. If you realise that you're going into a rabbit hole of your thoughts and overthinking and panic is beginning to arise, get up and go somewhere else- focus on something else like writing down what makes you feel anxiousso that you can identify what's keeping you worried- seeing it would help you better alleviate and think out what's real and what's not. You can also watch a show or do some simple exercises- anything to prevent yourself from overthinking.This habit may seem useless or burdensome at first- but with practice- you're training your mind to redirect thoughts.",
+		
+		"Use a mantra to remind yourself that you are safe and you will be okay.'These thoughts are uncomfortable, but not dangerous- this, too, will pass.' , 'One day at a time', 'I've made it this far- i am able to go further'",
+		
+		
+		"This will pass. It's common to feel as if anxious feelings will last forever. Use this mantra to remind yourself that even though you're feeling anxious right now, there is an end in sight.As uncomfortable and scary as it can be, anxiety attacks come and go. This reminder can be comforting and help you reach the other side.",
+		
+		"One day at a time. A sense of overwhelm can often trigger anxiety. Things like a looming to-do list can bring it on. Reminding yourself that you only have to get through today can ease the pressure.Whatever responsibilities or trials you may have to face in the future, right now you only need to get through today.",
+		
+		"I'll cross that bridge when I come to it. Worrying about the future can often fuel anxiety. Instead of ruminating on what if, it can be helpful to remind yourself where you're at in the present moment.Usually, the present moment is much more manageable than a whole week, month, or year ahead. Start with now and go from there.",
+		
+		" Focus on your  breathing. You often don't think as clearly as you are capable of when your body is experiencing anxious thoughts. A quick way to calm down is by practicing breathing exercises which you can do anywhere and at any time.These exercises are great at reducing anxiety before and even big events, as well as during other times when stress feels overwhelming. Here are a few short steps if you'd like to practice deep breathing now, which you can later use between classes, at lunch or before and after school- whenever you need to:1.Sit comfortably, with both feet on floor, and place one hand on your abdomen. Make sure your muscles are relaxed.2.Breathe deeply through your nose until your abdomen rises.3.Hold this breath for 5 seconds, then exhale slowly through your mouth like you're blowing through a straw.4.Repeat this pattern for 3 to 5 minutes.",
+		
+		"Progress Muscle Relaxation is a great  reliever which you can use during big events, before bed or any other time when you feel physically fatigued by your mental thoughts. By practicing this method, you can learn to release atress from your body in seconds which is very helpful as you can adapt it to help relaxation efforts before bed for deeper and more peaceful sleep,and you can always use it to relax and reverse panic.Follow these simple steps to get started:1.Get in a comfortable position, ideally lying down2.Start by tensing your lower leg muscles.3.While contracting these muscles, breathe in for 5 to 10 seconds, then exhale and release the contraction.4.Stay in this relaxed position for 10 seconds5.Move your way up your body, contracting different muscle groups while breathing in and out, holding for 5 to 10 seconds with each breath, and then relaxing for 10 seconds before moving to the next muscle group."
+	],
+		
+		"context_filter": "guidedsctipts"
+	
+	},
+	
+	
+	{
+		"tag": "schoolstressscript",
+		
+		"patterns": ["school stress", "school"],
+		
+		"responses": [
+		" one of the most important things you can do is Get Enough Sleep. I know, I know- with busy schedules and soo many things that need to be done- missing sleep is a usual. However, operating in a sleep-deprived state puts you at a distinct disadvantage beacuse you are less productive as you find it more difficult to focus and learn, unmotivated and this would add to your stress as you may seem behind.Therefore, I encourage you to not neglect your sleep schedule- you'd be able to get more done when you're rested. Take power naps if necessary.",
+		
+		" a helpful and creative way to relieve stress is through Visualization. Using guided imagery to reduce stress is easy and effective as it can help you calm down and detach from what is stressing you- turning off your body's stress response.You can visualise to help prepare for presenatations and even score higher on exams by vividly seeing yourself performing just as you'd like to.By thinking through the process in a calm manner- you're able to detect all the steps you actually need to follow, making it easier for you to plan and more motivated as you see yourself doing them.",
+		
+		" Regular Exercise is one of the healthiest ways to let go off 'steam' and pent up frustration. I know, I know- where is the time for exercise or how can you when you're so tired?Here are some suggestions that fit just right into your usual day- a few yoga stretches in the morning, walking or biking to campus or even just reviewing for your exams and planning assignments while walking on a treadmill.When you start these basic routines and you begin to feel a difference in your day and mood, energy levels- you'd want to incorporate it more into your schedule for sure! Looking better and feeling better always makes me feel better :)",
+		
+		" Focus on your  breathing. You often don't think as clearly as you are capable of when your body is experiencing a stress response. A quick way to calm down is by practicing breathing exercises which you can do anywhere and at any time.These exercises are great at reducing anxiety before and even during exams or big presentations, as well as during other times when stress feels overwhelming. Here are a few short steps if you'd like to practice deep breathing now, which you can later use between classes, at lunch or before and after school- whenever you need to:1.Sit comfortably, with both feet on floor, and place one hand on your abdomen. Make sure your muscles are relaxed.2.Breathe deeply through your nose until your abdomen rises.3.Hold this breath for 5 seconds, then exhale slowly through your mouth like you're blowing through a straw.4.Repeat this pattern for 3 to 5 minutes.",
+		
+		"Progress Muscle Relaxation is a great stress reliever which you can use during exams, before bed or any other time when you feel physically fatigued by stress. By practicing this method, you can learn to release stress from your body in seconds which is very helpful as you can adapt it to help relaxation efforts before bed for deeper and more peaceful sleep,and you can always use it to relax and reverse test induced panic before or during big exams and presentations.Follow these simple steps to get started:1.Get in a comfortable position, ideally lying down2.Start by tensing your lower leg muscles.3.While contracting these muscles, breathe in for 5 to 10 seconds, then exhale and release the contraction.4.Stay in this relaxed position for 10 seconds.5.Move your way up your body, contracting different muscle groups while breathing in and out, holding for 5 to 10 seconds with each breath, and then relaxing for 10 seconds before moving to the next muscle group.",
+		
+		"Listening to Music is a convenient and relaxing way to help relieve stress. It has shown many cognitive benefits has it is able to help calm down and stimulate your mind as necessary.You can harness the benefits of music by playing classical music while studying, playing upbeat music to 'wake up' mentally or simply relax and destress with the help of your favorite songs.Right now, my favorite song is Heat Waves by Glass Animals.",
+		
+		"Getting Organized is a very beneficial and effective way to help releive you of your stress. Clutter can be the cause of your stress and decrease productivity having negative effects on grades and mental well being.Trust me, I know how easily things can pile up expecially when you're busy. And I know how mentally exhausting it can be to even try decluttering. But, trust me that one way of reducing the amount of stress and mental drain is to keep a minimalist and soothing area, free of distractions and clutter to get your work done.This helps lower stress levels, saves time finding lost items and keeps your mood more positive which helps with exam preparations and even encourages more studying and motivation.It is worth the effort and I know you can do it! Just think of how good you'd feel afterward.",
+		
+		"This method may not be your favorite as I know just how good snacking is! I myself have suffered from snacking simply as a procrastination method. But, Eating Healthy can boost your brainpower and help you out mentally by feeling more energised.A healthy diet can help with stress management and serve as a study aid as it can prevent you from expriencing diet-related mood swings, light-headness and feeling fatigued.Now, don't get me wrong- by no means should you restrict yourself or cut out your favourite foods, but you should try to get some more healthy meals in as well. Fuel yourself! :)"
+		
+		
+		],
+		
+		"context_filter": "guidedsctipts"
+	
+	},
+
+	{
+		"tag": "stressscript",
+		
+		"patterns": ["stress"],
+		
+		"responses": [
+		
+		" one of the most important things you can do is Get Enough Sleep. I know, I know- with busy schedules and soo many things that need to be done- missing sleep is a usual. However, operating in a sleep-deprived state puts you at a distinct disadvantage beacuse you are less productive as you find it more difficult to focus and get all that you need to do done, unmotivated and this would add to your stress as you may feel like all your tasks are piling up.Therefore, I encourage you to not neglect your sleep schedule- you'd be able to get more done when you're rested. Take power naps if necessary.",
+		
+		" a helpful and creative way to relieve stress is through Visualization. Using guided imagery to reduce stress is easy and effective as it can help you calm down and detach from what is stressing you- turning off your body's stress response.By thinking through the process in a calm manner- you're able to detect all the steps you actually need to follow, making it easier for you to plan and more motivated as you see yourself doing them.You don't even need to think about your tasks to calm down- even though it will help I understand that somtimes you just want to forget about it all for a bit.Visualization can still help here and can be practiced anywhere at any time, whether you're out for a walk, riding the bus to work or waiting at the doctor's office.Begin by taking a gentle breath in and then slowly letting it out through the mouth. Allow your eyes to close gently in the knowledge that you are safe. I would like you to find a place of stillness and comfort. It can be real or imagined, as long as it makes you feel good.I would like you to describe it to me.What does it look like? Are there any smells that stand out? How about any sounds? Take a moment to notice what this place feels like. Good. Now, I would like you to catch this place in a snow globe and set it down in your mind. Can you do that for me? Put the globe somewhere easily accessible and come back to it whenever you're feeling stressed, angry or in danger. Hold on to this inner calm as you continue to breathe and gently open your eyes in the knowledge that you will always be safe there.",
+		
+		
+		" Regular Exercise is one of the healthiest ways to let go off 'steam' and pent up frustration. I know, I know- where is the time for exercise or how can you when you're so tired?Here are some suggestions that fit just right into your usual day- a few yoga stretches in the morning, walking or biking to where you need to go if you are able to or even just reviewing and planning your tasks while walking on a treadmill.When you start these basic routines and you begin to feel a difference in your day and mood, energy levels- you'd want to incorporate it more into your schedule for sure! Working out regularly is one of the best ways to relax your body and mind. Plus, exercise will improve your mood. But you have to do it often for it to pay off.Remember that doing any exercise is better than none at all. Looking better and feeling better always makes me feel better :)",
+		
+		" Focus on your  breathing. You often don't think as clearly as you are capable of when your body is experiencing a stress response. A quick way to calm down is by practicing breathing exercises which you can do anywhere and at any time.These exercises are great at reducing anxiety before and even big events, as well as during other times when stress feels overwhelming. Here are a few short steps if you'd like to practice deep breathing now, which you can later use between classes, at lunch or before and after school- whenever you need to:1.Sit comfortably, with both feet on floor, and place one hand on your abdomen. Make sure your muscles are relaxed.2.Breathe deeply through your nose until your abdomen rises.3.Hold this breath for 5 seconds, then exhale slowly through your mouth like you’re blowing through a straw.4.Repeat this pattern for 3 to 5 minutes.",
+
+		"Progress Muscle Relaxation is a great stress reliever which you can use during big events, before bed or any other time when you feel physically fatigued by stress. By practicing this method, you can learn to release stress from your body in seconds which is very helpful as you can adapt it to help relaxation efforts before bed for deeper and more peaceful sleep,and you can always use it to relax and reverse panic.Follow these simple steps to get started:1.Get in a comfortable position, ideally lying down2.Start by tensing your lower leg muscles.3.While contracting these muscles, breathe in for 5 to 10 seconds, then exhale and release the contraction.4.Stay in this relaxed position for 10 seconds.5.Move your way up your body, contracting different muscle groups while breathing in and out, holding for 5 to 10 seconds with each breath, and then relaxing for 10 seconds before moving to the next muscle group.",
+
+		"Listening to Music is a convenient and relaxing way to help relieve stress. It has shown many cognitive benefits has it is able to help calm down and stimulate your mind as necessary.You can harness the benefits of music by playing classical music while getting tasks done, playing upbeat music to 'wake up' mentally or simply relax and destress with the help of your favorite songs.Right now, my favorite song is Heat Waves by Glass Animals.",
+		
+		"Take a Step Back- slow down and appreciate all that you've already accomplished and remember that you've already made it this far- you are able of going further. Slow down and relax using your favorite hobbies and calm down a bit by stepping away from what's causing you problems so that you can go back to them when your mind is decluttered and more relaxed.This way, you're able to refocus and have more mental energy to get what you need to do done.",
+		
+		"This method may not be your favorite as I know just how good snacking is! I myself have suffered from snacking simply as a way of coping with stress. But, Eating Healthy can boost your brainpower and help you out mentally by feeling more energised.A healthy diet can help with stress management  as it can prevent you from expriencing diet-related mood swings, light-headness and feeling fatigued.Now, don't get me wrong- by no means should you restrict yourself or cut out your favourite foods, but you should try to get some more healthy meals in as well. Fuel yourself! :)"
+		
+		
+		],
+		
+		"context_filter": "guidedsctipts"
+	
+	},
+	
+	
+	{
+		"tag": "overwhelmedscript",
+		
+		"patterns": ["overwhelmed", "worry","nervous"],
+		
+		"responses": [
+		
+		"When you're feeling overwhemled, remember that You've Felt This Way Before.Think about the last time you felt overwhelmed. How did you overcome it? In the end, was it really as bad as you thought?If you don't learn from past experiences, you'll find yourself suffering from the same problems over and over. Go to a quiet place, and take as long as you need to remember previous times in your life you felt this way and how you overcame it.",
+		
+		"Practice mindfulness. When you have a so many things going on, it can be challenging to focus on present. But the present moment is all we truly have.Tuning into it through mindfulness practices can help to reduce your anxiety over the past and the future.Some ways to practice mindfulness include:meditation, single-tasking, movement",
+		
+		"Do what you enjoy. Are you doing enough of what you love? Or are you just grinding through each day trying to cross off all the tasks on your to-do list before the day ends?Make it a point to set the time aside to bring joy into your life. Some things I enjoy that help me ground myself and alleviate bad thoughts are:listening to music, going for a walk, cooking dinner, watching the sunset,spending time with loved ones",
+		
+		"Use affirmations. Positive affirmations are so important. It's key to try to understand the subconscious mind and work with your blueprint, to see what helps you to manage situations.This time shows us we're not in control, but if you keep saying that to yourself, you'll keep panicking. Try repeating: 'I am doing my best,' and 'I can manage this'", 
+		
+		"One day at a time. A sense of overwhelm can often trigger anxiety. Things like a looming to-do list can bring it on. Reminding yourself that you only have to get through today can ease the pressure.Whatever responsibilities or trials you may have to face in the future, right now you only need to get through today.",
+		
+		"I'll cross that bridge when I come to it. Worrying about the future can often fuel anxiety. Instead of ruminating on what if, it can be helpful to remind yourself where you're at in the present moment.Usually, the present moment is much more manageable than a whole week, month, or year ahead. Start with now and go from there.",
+		
+		" Focus on your  breathing. You often don't think as clearly as you are capable of when your body is experiencing overwhelming thoughts. A quick way to calm down is by practicing breathing exercises which you can do anywhere and at any time.These exercises are great at reducing anxiety before and even big events, as well as during other times when stress feels overwhelming. Here are a few short steps if you'd like to practice deep breathing now, which you can later use between classes, at lunch or before and after school- whenever you need to:1.Sit comfortably, with both feet on floor, and place one hand on your abdomen. Make sure your muscles are relaxed.2.Breathe deeply through your nose until your abdomen rises.3.Hold this breath for 5 seconds, then exhale slowly through your mouth like you're blowing through a straw.4.Repeat this pattern for 3 to 5 minutes.",
+		
+		"Progress Muscle Relaxation is a great  reliever which you can use during big events, before bed or any other time when you feel physically fatigued by your mental thoughts. By practicing this method, you can learn to release stress from your body in seconds which is very helpful as you can adapt it to help relaxation efforts before bed for deeper and more peaceful sleep,and you can always use it to relax and reverse panic.Follow these simple steps to get started:1.Get in a comfortable position, ideally lying down2.Start by tensing your lower leg muscles.3.While contracting these muscles, breathe in for 5 to 10 seconds, then exhale and release the contraction.4.Stay in this relaxed position for 10 seconds.5.Move your way up your body, contracting different muscle groups while breathing in and out, holding for 5 to 10 seconds with each breath, and then relaxing for 10 seconds before moving to the next muscle group."
+
+		
+		
+		],
+		
+		"context_filter": "guidedsctipts"
+	
+	},
+	
+	{
+		"tag": "depressionscript",
+		
+		"patterns": ["depression","sad"],
+		
+		"responses": [
+					
+					"Remember that You will feel good again. Depression can sometimes feel like all the joy has gone out of the world. It can affect everything in your life.The truth is that depressive episodes won't last forever — there is hope. Reminding yourself of this truth may bring a sense of relief and perspective.",
+					
+					"Listen to your body. If depression has you feeling like you don't want to get out of bed, maybe that's OK for now.You can remind yourself that depression has physical symptoms, and that honoring what your body is telling you can be a compassionate way to care for yourself.",
+					
+					"Remember that you are not your thoughts. One symptom of depression is negative self-talk. These critical thoughts can make it hard to look ahead and gain perspective.Even in the middle of negative self-talk, you can choose to take space. Instead of taking all your thoughts for granted, you get to pick and choose which thoughts you validate and which you throw out.",
+					
+					"Try to keep up with social activities even if you don't feel like it. Often when you're depressed, it feels more comfortable to retreat into your shell, but being around other people will make you feel less depressed.",
+					
+					"Join a support group for depression. Being with others dealing with depression can go a long way in reducing your sense of isolation. You can also encourage each other, give and receive advice on how to cope, and share your experiences.",
+					
+					"Care for a pet. While nothing can replace the human connection, pets can bring joy and companionship into your life and help you feel less isolated. Caring for a pet can also get you outside of yourself and give you a sense of being needed—both powerful antidotes to depression.",
+					
+					"Do things that make you feel good.In order to overcome depression, you have to do things that relax and energize you. This includes following a healthy lifestyle, learning how to better manage stress, setting limits on what you're able to do, and scheduling fun activities into your day.",
+
+					"While you can't force yourself to have fun or experience pleasure, you can push yourself to do things, even when you don't feel like it. You might be surprised at how much better you feel once you're out in the world. Even if your depression doesn't lift immediately, you'll gradually feel more upbeat and energetic as you make time for fun activities.Pick up a former hobby or a sport you used to like. Express yourself creatively through music, art, or writing. Go out with friends. Take a day trip to a museum, the mountains, or the ballpark.",
+
+					"Aim for eight hours of sleep. Depression typically involves sleep problems; whether you're sleeping too little or too much, your mood suffers. ",
+
+					"Keep stress in check. Not only does stress prolong and worsen depression, but it can also trigger it. Figure out all the things in your life that stress you out, such as work overload, money problems, or unsupportive relationships, and find ways to relieve the pressure and regain control.",
+
+					"Practice relaxation techniques. A daily relaxation practice can help relieve symptoms of depression, reduce stress, and boost feelings of joy and well-being. Try yoga, deep breathing, progressive muscle relaxation, or meditation.",
+
+					"Your fatigue will improve if you stick with it. Starting to exercise can be difficult when you're depressed and feeling exhausted. But research shows that your energy levels will improve if you keep with it. Exercise will help you to feel energized and less fatigued, not more.Find exercises that are continuous and rhythmic. The most benefits for depression come from rhythmic exercise—such as walking, weight training, swimming, martial arts, or dancing—where you move both your arms and legs.",
+
+					"Add a mindfulness element, especially if your depression is rooted in unresolved trauma or fed by obsessive, negative thoughts. Focus on how your body feels as you move—such as the sensation of your feet hitting the ground, or the feeling of the wind on your skin, or the rhythm of your breathing",
+							
+					"Don't skip meals. Going too long between meals can make you feel irritable and tired, so aim to eat something at least every three to four hours.",
+
+					"Boost your B vitamins. Deficiencies in B vitamins such as folic acid and B-12 can trigger depression. To get more, take a B-complex vitamin supplement or eat more citrus fruit, leafy greens, beans, chicken, and eggs.",
+
+					"Boost your mood with foods rich in omega-3 fatty acids. Omega-3 fatty acids play an essential role in stabilizing mood. The best sources are fatty fish such as salmon, herring, mackerel, anchovies, sardines, tuna, and some cold-water fish oil supplements.",
+
+					"Sunlight can help boost serotonin levels and improve your mood. Whenever possible, get outside during daylight hours and expose yourself to the sun for at least 15 minutes a day. Remove sunglasses (but never stare directly at the sun) and use sunscreen as needed.",
+
+					"Identify the type of negative thoughts that are fueling your depression, and replace them with a more balanced way of thinking.Negative, unrealistic ways of thinking that fuel depression are:All-or-nothing thinking. Looking at things in black-or-white categories, with no middle ground (“If everything is not perfect, I’m a total failure.”)Overgeneralization. Generalizing from a single negative experience, expecting it to hold true forever (“I had a bad date, I'll never find anyone.”)The mental filter - Ignoring positive events and focusing on the negative. Noticing the one thing that went wrong, rather than all the things that went right. (“I got the last question on the test wrong. I'm an idiot.”)Diminishing the positive. Coming up with reasons why positive events don't count (“She said she had a good time on our date, but I think she was just being nice.”)Jumping to conclusions. Making negative interpretations without actual evidence. You act like a mind reader (“He must think I'm pathetic”) or a fortune teller (“I'll be stuck in this dead-end job forever.”)Emotional reasoning. Believing that the way you feel reflects reality (“I feel like such a loser. Everyone must be laughing at me!”)'Shoulds' and 'should-nots.' Holding yourself to a strict list of what you should and shouldn't do, and beating yourself up if you don't live up to your rules. (“I should never have interviewed for that job. I'm an idiot for thinking I could get it.”)Labeling. Classifying yourself based on mistakes and perceived shortcomings (“I'm a failure; an idiot; a loser.”)"
+					
+					],
+		
+		"context_filter": "guidedsctipts"
+	
+	},
+	
+	{
+		"tag": "familyscript",
+		
+		"patterns": ["family problems","parents","parental problems","sibling issues"],
+		
+		"responses": [
+					"Agree to negotiate- Usually, our first angry impulse is to push the point that we are right and win the argument at any cost. Finding a peaceful resolution can be difficult, if not impossible, when both parties stubbornly stick to their guns. It helps if everyone decides as a family to try listening to each other and negotiating instead.You can try:Work out if the issue is worth fighting over,Try to separate the problem from the person,Try to cool off first if you feel too angry to talk calmly,Keep in mind that the idea is to resolve the conflict, not win the argument,Remember that the other party isn't obliged to always agree with you on everything,Define the problem and stick to the topic,Respect the other person's point of view by paying attention and listening,Talk clearly and reasonably,Try to find points of common ground,Agree to disagree",
+					
+					"Try to listen-Conflict can escalate when the people involved are too angry to listen to each other. Misunderstandings fuel arguments. Suggestions include:Try to stay calm.Try to put emotions aside.Don't interrupt the other person while they are speaking.Actively listen to what they are saying and what they mean.Check that you understand them by asking questions.Communicate your side of the story clearly and honestly.Resist the urge to bring up other unresolved but unrelated issues.",
+					
+					"Work as a team-Once all parties understand the views and feelings of the other, you can work out a solution together. Suggestions include:Come up with as many possible solutions as you can.Be willing to compromise.Make sure everyone clearly understands the chosen solution.Once the solution is decided on, stick to it.Write it down as a 'contract', if necessary.",
+
+					"The first step in finding solutions to family problems is communicating.To solve family problems, discuss your problems with your loved ones calmly and honestly.You should accept the fact that opinions differ, and you may not always agree on the same things. Accepting the differences goes a long way in solving the conflicts.",
+					
+					"Don't discuss the family problem when you're still feeling upset or emotional. If you wait even a single night, the intensity of the emotion is likely to subside somewhat, even if you're still unhappy.Waiting allows you to approach the issue logically, rather than emotionally. If you take a step back and give yourself some time to think before dealing with the issue, you won't deal with it so reactively.Approaching someone when you are angry will heighten the intensity around an already tough situation. There's no reason you can't wait to make your point tomorrow, so control your instant impulse."
+					
+					
+		
+		
+		],
+		
+		"context_filter": "guidedsctipts"
+	
+	},
+	
+		{
+		"tag": "relationshipscript",
+		
+		"patterns": [ "relationship problems" , "relationship arguments","fighting with partner"],
+		
+		"responses": [
+					
+					"Be honest with yourself. When you're in the midst of an argument, are your comments geared toward resolving the conflict, or are you looking for payback? If your comments are blaming and hurtful, it's best to take a deep breath and change your strategy.Change it up. If you continue to respond in the way that's brought you pain and unhappiness in the past, you can't expect a different result this time. Just one little shift can make a big difference. If you usually jump right in to defend yourself before your partner is finished speaking, hold off for a few moments. You'll be surprised at how such a small shift in tempo can change the whole tone of an argument.",
+					
+					"Be candid about your feelings—the good and the bad. Regularly opening up can help bring you closer, says psychotherapist Beth Sonnenberg,  “Once you think that your feelings don't matter, won't be heard, or are not worth sharing, you open the door to harbor negativity and resentment.” That includes positive feelings, too, she points out—especially when they're connected with your partner. “People need to feel appreciated in any relationship,”",
+					
+					"Figure out the recurring issues in your relationship. Then, do something about them.not addressing the root of the problem means you're going to continue to fight.Focusing on the issue rather than blame can allow for more effective problem solving and a team-based approach",
+					
+					" When you're having an important discussion with your partner, repeat back exactly what you heard them say before you comment on it.This not only dramatically improves the accuracy and quality of communication by allowing for correction of misinterpretations, but also creates of strong sense of being heard and understood in each partner",
+					
+					"When you've found someone you love spending time with and doing life with, things can feel great. While it's normal to experience the ups and downs of a relationship, if you find issues coming up constantly, this can affect your headspace. Think about whether the positives of your relationship outweigh the negatives. If you're often feeling sad, hurt or angry, it may be worth ending the relationship. Doing this may even come with some unexpected positives.Relationship troubles can sometimes leave you with feelings of low mood and self-worth. Seeing a mental health professional can also help you focus on you and what you need, by tackling negative thoughts and talking through your relationship problems.",
+		
+					"If relationships are causing stress, working on setting boundaries or on becoming more assertive may be helpful. If too many demands on your time are causes of stress for you, it may be beneficial to work on setting priorities and limits, and cut back on things that you're able to let go for the time being. Some of the first stress management exercises you may want to try involve dealing directly with the sources of your stress."
+				
+				],
+		
+		"context_filter": "guidedsctipts"
+	
+	},
+	
+		{
+		"tag": "appearancescript",
+		
+		"patterns": ["appearance problems","body image issues","feeling ugly","don't look good","i dont like how i look",
+					"i hate my body","i wished i looked different","i want to be pretty","how to be pretty"],
+		
+		"responses": [" please be kind to your self \n Try not to compare yourself to the many images you see online and in magazines, which are often digitally changed to make them look 'perfect' - they don't reflect how people look in real life",
+						"Notice how social media is affecting the way you feel about your body \n There can be lots of pressure online to have the 'perfect' body when we compare ourselves to different people. Unfollow accounts that make you feel bad, and try following accounts that make you feel good instead. ",
+						"focus on the good things and remeber there aren't any bad things- you have to make them good \n Focus on the things you like about yourself, and the parts of your body that you like.",
+						"Spend time with people who make you feel positive about yourself \n It might help you to write down the nice things people say to you, and not just about how you look. Remember, people value you for many reasons.",
+						"what would you say to a friend? \n Think about what advice you would give a friend if they told you they were struggling with the way they look, and remember that advice whenever you start having negative thoughts.",
+						"Ultimately, true beauty is not about how you look. It's about how you are as a person and how you make others feel about themselves.",
+						"The truth is you are SO much more than how you look. You are unique in every possible way. No one else has your experiences, your passion, your way of living, your smile, your heart and soul. You are YOU. And that is worth celebrating.",
+						"I can understand the feeling- know nothing is wrong with you- but sometimes the pretty words aren't enough- \n some advide would be to identify those parts of yourself you can't change adn slowly learn to accept and love them- now for the parts you can, if you want- do so in a healthy manner"
+					],
+		
+		"context_filter": "guidedsctipts"
+	
+	},
+	
+	{
+		"tag": "angryscript",
+		
+		"patterns": ["angry", "anger","fed up","frustrated"],
+		
+		"responses": [
+		
+					"In the heat of the moment, it's easy to say something you'll later regret. Take a few moments to collect your thoughts before saying anything you may regret later.",
+
+					"As soon as you're thinking clearly, express your frustration in an assertive but nonconfrontational way. State your concerns and needs clearly and directly, without hurting others or trying to control them.",
+
+					"Physical activity can help reduce stress that can cause you to become angry. If you feel your anger escalating, go for a brisk walk or run, or spend some time doing other enjoyable physical activities.However, do not do any physical activities that will bring harm to you or anyone else especially for the adrenaline thrill-it will wear off",
+
+					"Give yourself short breaks during times of the day that tend to be stressful. A few moments of quiet time might help you feel better prepared to handle what's ahead without getting irritated or angry.",
+
+					"Instead of focusing on what made you mad, work on resolving the issue at hand. Remind yourself that anger won't fix anything and might only make it worse.I know how difficult this step can be- especially when you think you're right but refocusing is what will be best for you! Why be the only one upset when you don't deserve it?",
+
+					"To avoid criticizing or placing blame — which might only increase tension — use 'I' statements to describe the problem. Be respectful and specific.This will help in defusing the other person and helping them understand better",
+
+					"Forgiveness is a powerful tool. If you allow anger and other negative feelings to crowd out positive feelings, you might find yourself swallowed up by your own bitterness or sense of injustice. But if you can forgive someone who angered you, you might both learn from the situation and strengthen your relationship.Trust me- I understand how difficult this is- especially when you think it's not well-deserved.But- it' for you more tha anyone else because this allows you to move forward.",
+		
+					"Lightening up can help diffuse tension. Use humor to help you face what's making you angry and, possibly, any unrealistic expectations you have for how things should go. Avoid sarcasm, though — it can hurt feelings and make things worse.",
+
+					"When your temper flares, put relaxation skills to work. Practice deep-breathing exercises, imagine a relaxing scene, or repeat a calming word or phrase, such as 'Take it easy.' You might also listen to music, write in a journal or do a few yoga poses — whatever it takes to encourage relaxation."
+		
+		],
+		
+		"context_filter": "guidedsctipts"
+	
+	},
+	
+	{
+		"tag": "otherscript",
+		
+		"patterns": ["other"],
+		
+		"responses": ["I'm here to help you feel better, your mental wellbeing is my priority and I'm here for you. Please tell me how you're feeling right now? \n or you can browse the 'Resources' section where you can find many helpful resources to assist",
+					"Let's get you feeling good again, what seems to be troubling you?", "What would you like to talk about? \n or you can browse the 'Resources' section where you can find many helpful resources to assist"],
+		
+		"context_filter": "guidedsctipts"
+	
+	}
+
+	
+
+]}
+
+
+
